@@ -1,0 +1,697 @@
+2.1.13.3.1
+Floating Point (FP) Events
+PMCx000 [FPU Pipe Assignment] (FpuPipeAssignment)
+Read-only. Reset: 00h.
+The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This
+event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all
+operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one-
+cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since
+this event includes non-numeric operations it is not suitable for measuring MFLOPS.
+Core::X86::Pmc::Core::FpuPipeAssignment; PMCx000
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+Dual3: Total number multi-pipe uOps assigned to Pipe 3. Read-only. Reset: 0.
+Dual2: Total number multi-pipe uOps assigned to Pipe 2. Read-only. Reset: 0.
+Dual1: Total number multi-pipe uOps assigned to Pipe 1. Read-only. Reset: 0.
+Dual0: Total number multi-pipe uOps assigned to Pipe 0. Read-only. Reset: 0.
+Total3: Total number uOps assigned to Pipe 3. Read-only. Reset: 0.
+Total2: Total number uOps assigned to Pipe 2. Read-only. Reset: 0.
+Total1: Total number uOps assigned to Pipe 1. Read-only. Reset: 0.
+Total0: Total number uOps assigned to Pipe 0. Read-only. Reset: 0.
+PMCx001 [FP Scheduler Empty] (FpSchedEmpty)
+This is a speculative event. The number of cycles in which the FPU scheduler is empty. Note that some Ops like
+15854945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+FP loads bypass the scheduler. Invert this (Core::X86::Msr::PERF_CTL[Inv] == 1) to count cycles in which at
+least one FPU operation is present in the FPU.
+Core::X86::Pmc::Core::FpSchedEmpty; PMCx001
+Bits
+7:0
+Description
+Reserved.
+PMCx002 [Retired x87 Floating Point Operations] (FpRetx87FpOps)
+Read-write. Reset: 00h.
+The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to
+8.
+Core::X86::Pmc::Core::FpRetx87FpOps; PMCx002
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+DivSqrROps: Divide and square root Ops. Read-write. Reset: 0.
+MulOps: Multiply Ops. Read-write. Reset: 0.
+AddSubOps: Add/subtract Ops. Read-write. Reset: 0.
+PMCx003 [Retired SSE/AVX Operations] (FpRetSseAvxOps)
+Read-write. Reset: 00h.
+This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can
+vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events].
+Core::X86::Pmc::Core::FpRetSseAvxOps; PMCx003
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+DpMultAddFlops: Double precision multiply-add FLOPS. Read-write. Reset: 0. Multiply-add counts
+as 2 FLOPS.
+DpDivFlops: Double precision divide/square root FLOPS. Read-write. Reset: 0.
+DpMultFlops: Double precision multiply FLOPS. Read-write. Reset: 0.
+DpAddSubFlops: Double precision add/subtract FLOPS. Read-write. Reset: 0.
+SpMultAddFlops: Single precision multiply-add FLOPS. Read-write. Reset: 0. Multiply-add counts
+as 2 FLOPS.
+SpDivFlops: Single-precision divide/square root FLOPS. Read-write. Reset: 0.
+SpMultFlops: Single-precision multiply FLOPS. Read-write. Reset: 0.
+SpAddSubFlops: Single-precision add/subtract FLOPS. Read-write. Reset: 0.
+PMCx004 [Number of Move Elimination and Scalar Op Optimization] (FpNumMovElimScalOp)
+Read-write. Reset: 00h.
+This is a dispatch based speculative event, and is useful for measuring the effectiveness of the Move elimination
+and Scalar code optimization schemes.
+Core::X86::Pmc::Core::FpNumMovElimScalOp; PMCx004
+Bits
+7:4
+3
+2
+1
+0
+Description
+Reserved.
+Optimized: Number of Scalar Ops optimized. Read-write. Reset: 0.
+OptPotential: Number of Ops that are candidates for optimization (have Z-bit either set or pass).
+Read-write. Reset: 0.
+SseMovOpsElim: Number of SSE Move Ops eliminated. Read-write. Reset: 0.
+SseMovOps: Number of SSE Move Ops. Read-write. Reset: 0.
+PMCx005 [Retired Serializing Ops] (FpRetiredSerOps)
+Read-write. Reset: 00h.
+The number of serializing Ops retired.
+Core::X86::Pmc::Core::FpRetiredSerOps; PMCx005
+Bits
+Description
+15954945 Rev 1.14 - April 15, 2017
+7:4
+3
+2
+1
+0
+2.1.13.3.2
+PPR for AMD Family 17h Model 01h B1
+Reserved.
+X87CtrlRet: x87 control word mispredict traps due to mispredictions in RC or PC, or changes in
+mask bits. Read-write. Reset: 0.
+X87BotRet: x87 bottom-executing uOps retired. Read-write. Reset: 0.
+SseCtrlRet: SSE control word mispredict traps due to mispredictions in RC, FTZ or DAZ, or
+changes in mask bits. Read-write. Reset: 0.
+SseBotRet: SSE bottom-executing uOps retired. Read-write. Reset: 0.
+LS Events
+PMCx025 [Locks] (LsLocks)
+Read-write. Reset: 00h.
+Unit Masks ORed.
+Core::X86::Pmc::Core::LsLocks; PMCx025
+Bits
+7:4
+3
+2
+1
+0
+Description
+Reserved.
+SpecLockMapCommit. Read-write. Reset: 0.
+SpecLock. Read-write. Reset: 0.
+NonSpecLock. Read-write. Reset: 0.
+BusLock. Read-write. Reset: 0.
+PMCx029 [LS Dispatch] (LsDispatch)
+Read-write. Reset: 00h.
+Counts the number of operations dispatched to the LS unit. Unit Masks ADDed.
+Core::X86::Pmc::Core::LsDispatch; PMCx029
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+LdStDispatch: Load-op-Stores. Read-write. Reset: 0.
+StoreDispatch. Read-write. Reset: 0.
+LdDispatch. Read-write. Reset: 0.
+PMCx035 [Store to Load Forward] (LsSTLF)
+Number of STLF hits.
+Core::X86::Pmc::Core::LsSTLF; PMCx035
+Bits
+7:0
+Description
+Reserved.
+PMCx040 [Data Cache Accesses] (LsDcAccesses)
+The number of accesses to the data cache for load and store references. This may include certain microcode
+scratchpad accesses, although these are generally rare. Each increment represents an eight-byte access, although
+the instruction may only be accessing a portion of that. This event is a speculative event.
+Core::X86::Pmc::Core::LsDcAccesses; PMCx040
+Bits
+7:0
+Description
+Reserved.
+PMCx041 [MAB Allocation by Pipe] (LsMabAllocPipe)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::LsMabAllocPipe; PMCx041
+Bits
+7:5
+4
+3
+2
+1
+0
+Description
+Reserved.
+16054945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+TlbPipeEarly. Read-write. Reset: 0.
+HwPf. Read-write. Reset: 0.
+TlbPipeLate. Read-write. Reset: 0.
+StPipe. Read-write. Reset: 0.
+DataPipe. Read-write. Reset: 0.
+PMCx045 [L1 DTLB Miss] (LsL1DTlbMiss)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::LsL1DTlbMiss; PMCx045
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+TlbReload1GL2Miss. Read-write. Reset: 0.
+TlbReload2ML2Miss. Read-write. Reset: 0.
+TlbReload32KL2Miss. Read-write. Reset: 0.
+TlbReload4KL2Miss. Read-write. Reset: 0.
+TlbReload1GL2Hit. Read-write. Reset: 0.
+TlbReload2ML2Hit. Read-write. Reset: 0.
+TlbReload32KL2Hit. Read-write. Reset: 0.
+TlbReload4KL2Hit. Read-write. Reset: 0.
+PMCx046 [Tablewalker allocation] (LsTablewalker)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::LsTablewalker; PMCx046
+Bits
+7:4
+3
+2
+1
+0
+Description
+Reserved.
+PerfMonTablewalkAllocIside1. Read-write. Reset: 0.
+PerfMonTablewalkAllocIside0. Read-write. Reset: 0.
+PerfMonTablewalkAllocDside1. Read-write. Reset: 0.
+PerfMonTablewalkAllocDside0. Read-write. Reset: 0.
+PMCx047 [Misaligned loads] (LsMisalAccesses)
+Core::X86::Pmc::Core::LsMisalAccesses; PMCx047
+Bits
+7:0
+Description
+Reserved.
+PMCx04B [Prefetch Instructions Dispatched] (LsPrefInstrDisp)
+Read-write. Reset: 00h.
+Software Prefetch Instructions Dispatched.
+Core::X86::Pmc::Core::LsPrefInstrDisp; PMCx04B
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+PrefetchNTA. Read-write. Reset: 0.
+StorePrefetchW. Read-write. Reset: 0.
+LoadPrefetchW: Prefetch, Prefetch_T0_T1_T2. Read-write. Reset: 0.
+PMCx052 [Ineffective Software Prefetchs] (LsInefSwPref)
+Read-write. Reset: 00h.
+The number of software prefetches that did not fetch data outside of the processor core.
+Core::X86::Pmc::Core::LsInefSwPref; PMCx052
+Bits
+7:2
+1
+0
+Description
+Reserved.
+MabMchCnt. Read-write. Reset: 0.
+16154945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+DataPipeSwPfDcHit. Read-write. Reset: 0.
+PMCx076 [Cycles not in Halt] (LsNotHaltedCyc)
+Core::X86::Pmc::Core::LsNotHaltedCyc; PMCx076
+Bits
+7:0
+2.1.13.3.3
+Description
+Reserved.
+IC and BP Events
+Note: All instruction cache events are speculative events unless specified otherwise.
+PMCx080 [32 Byte Instruction Cache Fetch] (IcFw32)
+The number of 32B fetch windows transferred from IC pipe to DE instruction decoder (includes non-cacheable
+and cacheable fill responses).
+Core::X86::Pmc::Core::IcFw32; PMCx080
+Bits
+7:0
+Description
+Reserved.
+PMCx081 [32 Byte Instruction Cache Misses] (IcFw32Miss)
+The number of 32B fetch windows tried to read the L1 IC and missed in the full tag.
+Core::X86::Pmc::Core::IcFw32Miss; PMCx081
+Bits
+7:0
+Description
+Reserved.
+PMCx082 [Instruction Cache Refills from L2] (IcCacheFillL2)
+The number of 64 byte instruction cache line was fulfilled from the L2 cache.
+Core::X86::Pmc::Core::IcCacheFillL2; PMCx082
+Bits
+7:0
+Description
+Reserved.
+PMCx083 [Instruction Cache Refills from System] (IcCacheFillSys)
+The number of 64 byte instruction cache line fulfilled from system memory or another cache.
+Core::X86::Pmc::Core::IcCacheFillSys; PMCx083
+Bits
+7:0
+Description
+Reserved.
+PMCx084 [L1 ITLB Miss, L2 ITLB Hit] (BpL1TlbMissL2Hit)
+The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB.
+Core::X86::Pmc::Core::BpL1TlbMissL2Hit; PMCx084
+Bits
+7:0
+Description
+Reserved.
+PMCx085 [L1 ITLB Miss, L2 ITLB Miss] (BpL1TlbMissL2Miss)
+The number of instruction fetches that miss in both the L1 and L2 TLBs.
+Core::X86::Pmc::Core::BpL1TlbMissL2Miss; PMCx085
+Bits
+7:0
+Description
+Reserved.
+PMCx086 [Pipeline Restart Due to Instruction Stream Probe] (BpSnpReSync)
+The number of pipeline restarts caused by invalidating probes that hit on the instruction stream currently being
+executed. This would happen if the active instruction stream was being modified by another processor in an MP
+system - typically a highly unlikely event.
+Core::X86::Pmc::Core::BpSnpReSync; PMCx086
+16254945 Rev 1.14 - April 15, 2017
+Bits
+7:0
+PPR for AMD Family 17h Model 01h B1
+Description
+Reserved.
+PMCx087 [Instruction Pipe Stall] (IcFetchStall)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::IcFetchStall; PMCx087
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+IcStallAny. Read-write. Reset: 0. IC pipe was stalled during this clock cycle for any reason (nothing
+valid in pipe ICM1).
+IcStallDqEmpty. Read-write. Reset: 0. IC pipe was stalled during this clock cycle (including IC to OC
+fetches) due to DQ empty.
+IcStallBackPressure. Read-write. Reset: 0. IC pipe was stalled during this clock cycle (including IC to
+OC fetches) due to back-pressure.
+PMCx08A [L1 BTB Correction] (BpL1BTBCorrect)
+Core::X86::Pmc::Core::BpL1BTBCorrect; PMCx08A
+Bits
+7:0
+Description
+Reserved.
+PMCx08B [L2 BTB Correction] (BpL2BTBCorrect)
+Core::X86::Pmc::Core::BpL2BTBCorrect; PMCx08B
+Bits
+7:0
+Description
+Reserved.
+PMCx08C [Instruction Cache Lines Invalidated] (IcCacheInval)
+Read-write. Reset: 00h.
+The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code), either from
+the other thread of the core or another core.
+Core::X86::Pmc::Core::IcCacheInval; PMCx08C
+Bits
+7:2
+1
+0
+Description
+Reserved.
+L2InvalidatingProbe. Read-write. Reset: 0. IC line invalidated due to L2 invalidating probe (external
+or LS).
+FillInvalidated. Read-write. Reset: 0. IC line invalidated due to overwriting fill response.
+PMCx099 [ITLB Reloads] (BpTlbRel)
+The number of ITLB reload requests.
+Core::X86::Pmc::Core::BpTlbRel; PMCx099
+Bits
+7:0
+Description
+Reserved.
+PMCx28A [OC Mode Switch] (IcOcModeSwitch)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::IcOcModeSwitch; PMCx28A
+Bits
+7:2
+1
+0
+2.1.13.3.4
+Description
+Reserved.
+OcIcModeSwitch: OC to IC mode switch. Read-write. Reset: 0.
+IcOcModeSwitch: IC to OC mode switch. Read-write. Reset: 0.
+DE Events
+16354945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+PMCx0AF [Dynamic Tokens Dispatch Stall Cycles 0] (DeDisDispatchTokenStalls0)
+Read-write. Reset: 00h.
+Cycles where a dispatch group is valid but does not get dispatched due to a token stall.
+Core::X86::Pmc::Core::DeDisDispatchTokenStalls0; PMCx0AF
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+2.1.13.3.5
+Description
+Reserved.
+RetireTokenStall: RETIRE Tokens unavailable. Read-write. Reset: 0.
+AGSQTokenStall: AGSQ Tokens unavailable. Read-write. Reset: 0.
+ALUTokenStall: ALU tokens total unavailable. Read-write. Reset: 0.
+ALSQ3_0_TokenStall. Read-write. Reset: 0.
+ALSQ3TokenStall: ALSQ 3 Tokens unavailable. Read-write. Reset: 0.
+ALSQ2TokenStall: ALSQ 2 Tokens unavailable. Read-write. Reset: 0.
+ALSQ1TokenStall: ALSQ 1 Tokens unavailable. Read-write. Reset: 0.
+EX (SC) Events
+PMCx0C0 [Retired Instructions] (ExRetInstr)
+Core::X86::Pmc::Core::ExRetInstr; PMCx0C0
+Bits
+7:0
+Description
+Reserved.
+PMCx0C1 [Retired Uops] (ExRetCops)
+The number of uOps retired. This includes all processor activity (instructions, exceptions, interrupts, microcode
+assists, etc.). The number of events logged per cycle can vary from 0 to 4.
+Core::X86::Pmc::Core::ExRetCops; PMCx0C1
+Bits
+7:0
+Description
+Reserved.
+PMCx0C2 [Retired Branch Instructions] (ExRetBrn)
+The number of branch instructions retired. This includes all types of architectural control flow changes, including
+exceptions and interrupts.
+Core::X86::Pmc::Core::ExRetBrn; PMCx0C2
+Bits
+7:0
+Description
+Reserved.
+PMCx0C3 [Retired Branch Instructions Mispredicted] (ExRetBrnMisp)
+The number of branch instructions retired, of any type, that were not correctly predicted. This includes those for
+which prediction is not attempted (far control transfers, exceptions and interrupts).
+Core::X86::Pmc::Core::ExRetBrnMisp; PMCx0C3
+Bits
+7:0
+Description
+Reserved.
+PMCx0C4 [Retired Taken Branch Instructions] (ExRetBrnTkn)
+The number of taken branches that were retired. This includes all types of architectural control flow changes,
+including exceptions and interrupts.
+Core::X86::Pmc::Core::ExRetBrnTkn; PMCx0C4
+Bits
+7:0
+Description
+Reserved.
+PMCx0C5 [Retired Taken Branch Instructions Mispredicted] (ExRetBrnTknMisp)
+16454945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+The number of retired taken branch instructions that were mispredicted.
+Core::X86::Pmc::Core::ExRetBrnTknMisp; PMCx0C5
+Bits
+7:0
+Description
+Reserved.
+PMCx0C6 [Retired Far Control Transfers] (ExRetBrnFar)
+The number of far control transfers retired including far call/jump/return, IRET, SYSCALL and SYSRET, plus
+exceptions and interrupts. Far control transfers are not subject to branch prediction.
+Core::X86::Pmc::Core::ExRetBrnFar; PMCx0C6
+Bits
+7:0
+Description
+Reserved.
+PMCx0C7 [Retired Branch Resyncs] (ExRetBrnResync)
+The number of resync branches. These reflect pipeline restarts due to certain microcode assists and events such as
+writes to the active instruction stream, among other things. Each occurrence reflects a restart penalty similar to a
+branch mispredict. This is relatively rare.
+Core::X86::Pmc::Core::ExRetBrnResync; PMCx0C7
+Bits
+7:0
+Description
+Reserved.
+PMCx0C8 [Retired Near Returns] (ExRetNearRet)
+The number of near return instructions (RET or RET Iw) retired.
+Core::X86::Pmc::Core::ExRetNearRet; PMCx0C8
+Bits
+7:0
+Description
+Reserved.
+PMCx0C9 [Retired Near Returns Mispredicted] (ExRetNearRetMispred)
+The number of near returns retired that were not correctly predicted by the return address predictor. Each such
+mispredict incurs the same penalty as a mispredicted conditional branch instruction.
+Core::X86::Pmc::Core::ExRetNearRetMispred; PMCx0C9
+Bits
+7:0
+Description
+Reserved.
+PMCx0CA [Retired Indirect Branch Instructions Mispredicted] (ExRetBrnIndMisp)
+Core::X86::Pmc::Core::ExRetBrnIndMisp; PMCx0CA
+Bits
+7:0
+Description
+Reserved.
+PMCx0CB [Retired MMXTM/FP Instructions] (ExRetMmxFpInstr)
+Read-write. Reset: 00h.
+The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes
+of instructions as given in the table. Each increment represents one complete instruction. Since this event includes
+non-numeric instructions it is not suitable for measuring MFLOPS.
+Core::X86::Pmc::Core::ExRetMmxFpInstr; PMCx0CB
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+SseInstr. Read-write. Reset: 0. SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42,
+AVX).
+MmxInstr. Read-write. Reset: 0. MMX instructions.
+X87Instr: x87 instructions. Read-write. Reset: 0.
+PMCx0D1 [Retired Conditional Branch Instructions] (ExRetCond)
+Core::X86::Pmc::Core::ExRetCond; PMCx0D1
+16554945 Rev 1.14 - April 15, 2017
+Bits
+7:0
+PPR for AMD Family 17h Model 01h B1
+Description
+Reserved.
+PMCx0D2 [Retired Conditional Branch Instructions Mispredicted] (ExRetCondMisp)
+Core::X86::Pmc::Core::ExRetCondMisp; PMCx0D2
+Bits
+7:0
+Description
+Reserved.
+PMCx0D3 [Div Cycles Busy count] (ExDivBusy)
+Core::X86::Pmc::Core::ExDivBusy; PMCx0D3
+Bits
+7:0
+Description
+Reserved.
+PMCx0D4 [Div Op Count] (ExDivCount)
+Core::X86::Pmc::Core::ExDivCount; PMCx0D4
+Bits
+7:0
+Description
+Reserved.
+PMCx1CF [Tagged IBS Ops] (ExTaggedIbsOps)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::ExTaggedIbsOps; PMCx1CF
+Bits
+7:3
+2
+1
+0
+Description
+Reserved.
+IbsCountRollover. Read-write. Reset: 0. Number of times an op could not be tagged by IBS because of
+a previous tagged op that has not retired.
+IbsTaggedOpsRet: Number of Ops tagged by IBS that retired. Read-write. Reset: 0.
+IbsTaggedOps: Number of Ops tagged by IBS. Read-write. Reset: 0.
+PMCx1D0 [Retired Fused Branch Instructions] (ExRetFusBrnchInst)
+The number of fused retired branch instructions retired per cycle. The number of events logged per cycle can vary
+from 0 to 3.
+Core::X86::Pmc::Core::ExRetFusBrnchInst; PMCx1D0
+Bits
+7:0
+2.1.13.3.6
+Description
+Reserved.
+L2 Cache Events.
+PMCx060 [Requests to L2 Group1] (L2RequestG1)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::L2RequestG1; PMCx060
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+RdBlkL. Read-write. Reset: 0.
+RdBlkX. Read-write. Reset: 0.
+LsRdBlkC_S. Read-write. Reset: 0.
+CacheableIcRead. Read-write. Reset: 0.
+ChangeToX. Read-write. Reset: 0.
+PrefetchL2. Read-write. Reset: 0.
+L2HwPf. Read-write. Reset: 0.
+OtherRequests. Read-write. Reset: 0. Events covered by Core::X86::Pmc::Core::L2RequestG2.
+PMCx061 [Requests to L2 Group2] (L2RequestG2)
+16654945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+Read-write. Reset: 00h.
+Multi-events in that LS and IF requests can be received simultaneous.
+Core::X86::Pmc::Core::L2RequestG2; PMCx061
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+Group1. Read-write. Reset: 0. All Group 1 commands not in unit0.
+LsRdSized. Read-write. Reset: 0. RdSized, RdSized32, RdSized64.
+LsRdSizedNC. Read-write. Reset: 0. RdSizedNC, RdSized32NC, RdSized64NC.
+IcRdSized. Read-write. Reset: 0.
+IcRdSizedNC. Read-write. Reset: 0.
+SmcInval. Read-write. Reset: 0.
+BusLocksOriginator. Read-write. Reset: 0.
+BusLocksResponses. Read-write. Reset: 0.
+PMCx062 [L2 Latency] (L2Latancy)
+Read-write. Reset: 00h.
+Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to
+calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit
+mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average
+latency, the number of fills from both threads must be used.
+Core::X86::Pmc::Core::L2Latancy; PMCx062
+Bits
+7:1
+0
+Description
+Reserved.
+L2CyclesWaitingOnFills. Read-write. Reset: 0.
+PMCx063 [LS to L2 WBC requests] (L2WbcReq)
+Read-write. Reset: 00h.
+Core::X86::Pmc::Core::L2WbcReq; PMCx063
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+Reserved.
+WcbWrite. Read-write. Reset: 0.
+WcbClose. Read-write. Reset: 0.
+CacheLineFlush. Read-write. Reset: 0.
+I_LineFlush. Read-write. Reset: 0.
+ZeroByteStore. Read-write. Reset: 0. This becomes WriteNoData at SDP; this count does not include
+DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.
+LocalIcClr: Local IC Clear. Read-write. Reset: 0.
+CLZero: Cache Line Zero. Read-write. Reset: 0.
+PMCx064 [Core to L2 Cacheable Request Access Status] (L2CacheReqStat)
+Read-write. Reset: 00h.
+This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1
+prefetcher.
+Core::X86::Pmc::Core::L2CacheReqStat; PMCx064
+Bits
+7
+6
+5
+4
+3
+2
+1
+0
+Description
+LsRdBlkCS: LS ReadBlock C/S Hit. Read-write. Reset: 0.
+LsRdBlkLHitX: LS Read Block L Hit X. Read-write. Reset: 0.
+LsRdBlkLHitS: LsRdBlkL Hit Shared. Read-write. Reset: 0.
+LsRdBlkX: LsRdBlkX/ChgToX Hit X. Read-write. Reset: 0. Count RdBlkX finding Shared as a Miss.
+LsRdBlkC: LS Read Block C S L X Change to X Miss. Read-write. Reset: 0.
+IcFillHitX: IC Fill Hit Exclusive Stale. Read-write. Reset: 0.
+IcFillHitS: IC Fill Hit Shared. Read-write. Reset: 0.
+16754945 Rev 1.14 - April 15, 2017
+PPR for AMD Family 17h Model 01h B1
+IcFillMiss: IC Fill Miss. Read-write. Reset: 0.
+PMCx06D [Cycles with fill pending from L2] (L2FillPending)
+Read-write. Reset: 00h.
+Total cycles spent with one or more fill requests in flight from L2.
+Core::X86::Pmc::Core::L2FillPending; PMCx06D
+Bits
+7:1
+0
+Description
+Reserved.
+L2FillBusy. Read-write. Reset: 0.
+2.1.13.4
+L3 Cache Performance Monitor Counters
+This section provides the core performance counter events that may be selected through
+Core::X86::Msr::ChL3PmcCfg. See Core::X86::Msr::ChL3Pmc.
+2.1.13.4.1
+L3 Cache PMC Events
+L3PMCx01 [L3 Cache Accesses] (L3RequestG1)
+Read-write. Reset: 00h.
+Core::X86::Pmc::L3::L3RequestG1; L3PMCx01
+Bits
+7
+6:0
+Description
+Caching: L3 cache accesses. Read-write. Reset: 0.
+Reserved.
+L3PMCx06 [L3 Miss] (L3CombClstrState)
+Read-write. Reset: 00h.
+Core::X86::Pmc::L3::L3CombClstrState; L3PMCx06
+Bits
+7:1
+0
+2.1.14
+Description
+Reserved.
+RequestMiss: L3 miss. Read-write. Reset: 0.
