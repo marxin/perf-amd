@@ -19,11 +19,11 @@ def convert(name):
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
 def canonicalize_name(name):
-    r = convert(name).upper()
+    r = convert(name).lower()
     r = r.replace('-', '_').replace('__', '_')
     for c in r:
-        assert c.isdigit() or c.isupper() or c == '_'
-    return r.upper()
+        assert c.isdigit() or c.islower() or c == '_'
+    return r.lower()
 
 class GroupValue:
     def __init__(self, bits, value):
@@ -154,12 +154,12 @@ for s in sections:
     results = []
     for g in s.groups:
         if len(g.values) == 1:
-            assert g.values[0].get_name() == 'RESERVED'
+            assert g.values[0].get_name() == 'reserved'
             d = {'EventName': g.get_event_name(), 'EventCode': g.pmc, 'BriefDescription': g.get_description()}
             results.append(d)
         else:
             for v in g.values:
-                if v.get_name() != 'RESERVED':
+                if v.get_name() != 'reserved':
                     description = v.description
                     full_description = g.get_description() + ' ' + description
                     if description == '':
