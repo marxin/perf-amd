@@ -3,62 +3,62 @@
     "EventName": "FPU_PIPE_ASSIGNMENT.DUAL3",
     "EventCode": "0x00",
     "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 3.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 3.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 3.",
     "UMask": "0x80"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.DUAL2",
     "EventCode": "0x00",
     "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 2.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 2.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 2.",
     "UMask": "0x40"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.DUAL1",
     "EventCode": "0x00",
     "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 1.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 1.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 1.",
     "UMask": "0x20"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.DUAL0",
     "EventCode": "0x00",
     "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 0.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 0.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 0.",
     "UMask": "0x10"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL3",
     "EventCode": "0x00",
     "BriefDescription": "Total number uOps assigned to Pipe 3.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 3.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 3.",
     "UMask": "0x8"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL2",
     "EventCode": "0x00",
     "BriefDescription": "Total number uOps assigned to Pipe 2.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 2.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 2.",
     "UMask": "0x4"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL1",
     "EventCode": "0x00",
     "BriefDescription": "Total number uOps assigned to Pipe 1.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 1.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 1.",
     "UMask": "0x2"
   },
   {
     "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL0",
     "EventCode": "0x00",
     "BriefDescription": "Total number uOps assigned to Pipe 0.",
-    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 0.",
+    "PublicDescription": "The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 0.",
     "UMask": "0x1"
   },
   {
     "EventName": "FP_SCHED_EMPTY",
     "EventCode": "0x01",
-    "BriefDescription": "This is a speculative event. The number of cycles in which the FPU scheduler is empty. Note that some Ops like FP loads bypass the scheduler. Invert this (Core::X86::Msr::PERF_CTL[Inv] == 1) to count cycles in which at least one FPU operation is present in the FPU."
+    "BriefDescription": "This is a speculative event. The number of cycles in which the FPU scheduler is empty. Note that some Ops like FP loads bypass the scheduler."
   },
   {
     "EventName": "FP_RETX87_FP_OPS.DIV_SQR_R_OPS",
@@ -85,56 +85,56 @@
     "EventName": "FP_RET_SSE_AVX_OPS.DP_MULT_ADD_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Double precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Double precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
     "UMask": "0x80"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.DP_DIV_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Double precision divide/square root FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision divide/square root FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Double precision divide/square root FLOPS.",
     "UMask": "0x40"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.DP_MULT_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Double precision multiply FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision multiply FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Double precision multiply FLOPS.",
     "UMask": "0x20"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.DP_ADD_SUB_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Double precision add/subtract FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision add/subtract FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Double precision add/subtract FLOPS.",
     "UMask": "0x10"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.SP_MULT_ADD_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Single precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Single precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
     "UMask": "0x8"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.SP_DIV_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Single-precision divide/square root FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision divide/square root FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Single-precision divide/square root FLOPS.",
     "UMask": "0x4"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.SP_MULT_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Single-precision multiply FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision multiply FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Single-precision multiply FLOPS.",
     "UMask": "0x2"
   },
   {
     "EventName": "FP_RET_SSE_AVX_OPS.SP_ADD_SUB_FLOPS",
     "EventCode": "0x03",
     "BriefDescription": "Single-precision add/subtract FLOPS.",
-    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision add/subtract FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. Single-precision add/subtract FLOPS.",
     "UMask": "0x1"
   },
   {

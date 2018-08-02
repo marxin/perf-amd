@@ -1,11 +1,10 @@
 2.1.13.3.1
 Floating Point (FP) Events
 PMCx000 [FPU Pipe Assignment] (FpuPipeAssignment)
-Read-only. Reset: 00h.
 The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This
 event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all
 operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one-
-cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since
+cycle dispatch event. This event is a speculative event. Since
 this event includes non-numeric operations it is not suitable for measuring MFLOPS.
 Core::X86::Pmc::Core::FpuPipeAssignment; PMCx000
 Bits
@@ -30,8 +29,7 @@ PMCx001 [FP Scheduler Empty] (FpSchedEmpty)
 This is a speculative event. The number of cycles in which the FPU scheduler is empty. Note that some Ops like
 15854945 Rev 1.14 - April 15, 2017
 PPR for AMD Family 17h Model 01h B1
-FP loads bypass the scheduler. Invert this (Core::X86::Msr::PERF_CTL[Inv] == 1) to count cycles in which at
-least one FPU operation is present in the FPU.
+FP loads bypass the scheduler.
 Core::X86::Pmc::Core::FpSchedEmpty; PMCx001
 Bits
 7:0
@@ -55,7 +53,7 @@ AddSubOps: Add/subtract Ops. Read-write. Reset: 0.
 PMCx003 [Retired SSE/AVX Operations] (FpRetSseAvxOps)
 Read-write. Reset: 00h.
 This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can
-vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events].
+vary from 0 to 64. This event can count above 15.
 Core::X86::Pmc::Core::FpRetSseAvxOps; PMCx003
 Bits
 7
