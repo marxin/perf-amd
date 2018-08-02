@@ -163,7 +163,7 @@ for s in sections:
                     description = v.description
                     full_description = g.get_description() + ' ' + description
                     if description == '':
-                        description = g.get_description() + ' ' + v.get_name()
+                        description = g.get_description() + ' Event name: ' + v.get_name()
                         full_description = description
                     d = {'EventName': g.get_event_name() + '.' + v.get_name(), 'EventCode': g.pmc, 'BriefDescription': description,
                             'PublicDescription': full_description, 'UMask': v.get_mask()}

@@ -196,29 +196,29 @@
   {
     "EventName": "LS_LOCKS.SPEC_LOCK_MAP_COMMIT",
     "EventCode": "0x25",
-    "BriefDescription": "Unit Masks ORed. SPEC_LOCK_MAP_COMMIT",
-    "PublicDescription": "Unit Masks ORed. SPEC_LOCK_MAP_COMMIT",
+    "BriefDescription": "Unit Masks ORed. Event name: SPEC_LOCK_MAP_COMMIT",
+    "PublicDescription": "Unit Masks ORed. Event name: SPEC_LOCK_MAP_COMMIT",
     "UMask": "0x8"
   },
   {
     "EventName": "LS_LOCKS.SPEC_LOCK",
     "EventCode": "0x25",
-    "BriefDescription": "Unit Masks ORed. SPEC_LOCK",
-    "PublicDescription": "Unit Masks ORed. SPEC_LOCK",
+    "BriefDescription": "Unit Masks ORed. Event name: SPEC_LOCK",
+    "PublicDescription": "Unit Masks ORed. Event name: SPEC_LOCK",
     "UMask": "0x4"
   },
   {
     "EventName": "LS_LOCKS.NON_SPEC_LOCK",
     "EventCode": "0x25",
-    "BriefDescription": "Unit Masks ORed. NON_SPEC_LOCK",
-    "PublicDescription": "Unit Masks ORed. NON_SPEC_LOCK",
+    "BriefDescription": "Unit Masks ORed. Event name: NON_SPEC_LOCK",
+    "PublicDescription": "Unit Masks ORed. Event name: NON_SPEC_LOCK",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_LOCKS.BUS_LOCK",
     "EventCode": "0x25",
-    "BriefDescription": "Unit Masks ORed. BUS_LOCK",
-    "PublicDescription": "Unit Masks ORed. BUS_LOCK",
+    "BriefDescription": "Unit Masks ORed. Event name: BUS_LOCK",
+    "PublicDescription": "Unit Masks ORed. Event name: BUS_LOCK",
     "UMask": "0x1"
   },
   {
@@ -231,15 +231,15 @@
   {
     "EventName": "LS_DISPATCH.STORE_DISPATCH",
     "EventCode": "0x29",
-    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. STORE_DISPATCH",
-    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. STORE_DISPATCH",
+    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Event name: STORE_DISPATCH",
+    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Event name: STORE_DISPATCH",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_DISPATCH.LD_DISPATCH",
     "EventCode": "0x29",
-    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. LD_DISPATCH",
-    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. LD_DISPATCH",
+    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Event name: LD_DISPATCH",
+    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Event name: LD_DISPATCH",
     "UMask": "0x1"
   },
   {
@@ -255,120 +255,120 @@
   {
     "EventName": "LS_MAB_ALLOC_PIPE.TLB_PIPE_EARLY",
     "EventCode": "0x41",
-    "BriefDescription": "MAB Allocation by Pipe. TLB_PIPE_EARLY",
-    "PublicDescription": "MAB Allocation by Pipe. TLB_PIPE_EARLY",
+    "BriefDescription": "MAB Allocation by Pipe. Event name: TLB_PIPE_EARLY",
+    "PublicDescription": "MAB Allocation by Pipe. Event name: TLB_PIPE_EARLY",
     "UMask": "0x10"
   },
   {
     "EventName": "LS_MAB_ALLOC_PIPE.HW_PF",
     "EventCode": "0x41",
-    "BriefDescription": "MAB Allocation by Pipe. HW_PF",
-    "PublicDescription": "MAB Allocation by Pipe. HW_PF",
+    "BriefDescription": "MAB Allocation by Pipe. Event name: HW_PF",
+    "PublicDescription": "MAB Allocation by Pipe. Event name: HW_PF",
     "UMask": "0x8"
   },
   {
     "EventName": "LS_MAB_ALLOC_PIPE.TLB_PIPE_LATE",
     "EventCode": "0x41",
-    "BriefDescription": "MAB Allocation by Pipe. TLB_PIPE_LATE",
-    "PublicDescription": "MAB Allocation by Pipe. TLB_PIPE_LATE",
+    "BriefDescription": "MAB Allocation by Pipe. Event name: TLB_PIPE_LATE",
+    "PublicDescription": "MAB Allocation by Pipe. Event name: TLB_PIPE_LATE",
     "UMask": "0x4"
   },
   {
     "EventName": "LS_MAB_ALLOC_PIPE.ST_PIPE",
     "EventCode": "0x41",
-    "BriefDescription": "MAB Allocation by Pipe. ST_PIPE",
-    "PublicDescription": "MAB Allocation by Pipe. ST_PIPE",
+    "BriefDescription": "MAB Allocation by Pipe. Event name: ST_PIPE",
+    "PublicDescription": "MAB Allocation by Pipe. Event name: ST_PIPE",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_MAB_ALLOC_PIPE.DATA_PIPE",
     "EventCode": "0x41",
-    "BriefDescription": "MAB Allocation by Pipe. DATA_PIPE",
-    "PublicDescription": "MAB Allocation by Pipe. DATA_PIPE",
+    "BriefDescription": "MAB Allocation by Pipe. Event name: DATA_PIPE",
+    "PublicDescription": "MAB Allocation by Pipe. Event name: DATA_PIPE",
     "UMask": "0x1"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD1_GL2_MISS",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_MISS",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_MISS",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD1_GL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD1_GL2_MISS",
     "UMask": "0x80"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD2_ML2_MISS",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_MISS",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_MISS",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD2_ML2_MISS",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD2_ML2_MISS",
     "UMask": "0x40"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD32_KL2_MISS",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_MISS",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_MISS",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD32_KL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD32_KL2_MISS",
     "UMask": "0x20"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD4_KL2_MISS",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_MISS",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_MISS",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD4_KL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD4_KL2_MISS",
     "UMask": "0x10"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD1_GL2_HIT",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_HIT",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_HIT",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD1_GL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD1_GL2_HIT",
     "UMask": "0x8"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD2_ML2_HIT",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_HIT",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_HIT",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD2_ML2_HIT",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD2_ML2_HIT",
     "UMask": "0x4"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD32_KL2_HIT",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_HIT",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_HIT",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD32_KL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD32_KL2_HIT",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD4_KL2_HIT",
     "EventCode": "0x45",
-    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_HIT",
-    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_HIT",
+    "BriefDescription": "L1 DTLB Miss. Event name: TLB_RELOAD4_KL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. Event name: TLB_RELOAD4_KL2_HIT",
     "UMask": "0x1"
   },
   {
     "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_ISIDE1",
     "EventCode": "0x46",
-    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE1",
-    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE1",
+    "BriefDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_ISIDE1",
+    "PublicDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_ISIDE1",
     "UMask": "0x8"
   },
   {
     "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_ISIDE0",
     "EventCode": "0x46",
-    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE0",
-    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE0",
+    "BriefDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_ISIDE0",
+    "PublicDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_ISIDE0",
     "UMask": "0x4"
   },
   {
     "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_DSIDE1",
     "EventCode": "0x46",
-    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE1",
-    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE1",
+    "BriefDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_DSIDE1",
+    "PublicDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_DSIDE1",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_DSIDE0",
     "EventCode": "0x46",
-    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE0",
-    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE0",
+    "BriefDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_DSIDE0",
+    "PublicDescription": "Tablewalker allocation. Event name: PERF_MON_TABLEWALK_ALLOC_DSIDE0",
     "UMask": "0x1"
   },
   {
@@ -379,15 +379,15 @@
   {
     "EventName": "LS_PREF_INSTR_DISP.PREFETCH_NTA",
     "EventCode": "0x4b",
-    "BriefDescription": "Software Prefetch Instructions Dispatched. PREFETCH_NTA",
-    "PublicDescription": "Software Prefetch Instructions Dispatched. PREFETCH_NTA",
+    "BriefDescription": "Software Prefetch Instructions Dispatched. Event name: PREFETCH_NTA",
+    "PublicDescription": "Software Prefetch Instructions Dispatched. Event name: PREFETCH_NTA",
     "UMask": "0x4"
   },
   {
     "EventName": "LS_PREF_INSTR_DISP.STORE_PREFETCH_W",
     "EventCode": "0x4b",
-    "BriefDescription": "Software Prefetch Instructions Dispatched. STORE_PREFETCH_W",
-    "PublicDescription": "Software Prefetch Instructions Dispatched. STORE_PREFETCH_W",
+    "BriefDescription": "Software Prefetch Instructions Dispatched. Event name: STORE_PREFETCH_W",
+    "PublicDescription": "Software Prefetch Instructions Dispatched. Event name: STORE_PREFETCH_W",
     "UMask": "0x2"
   },
   {
@@ -400,15 +400,15 @@
   {
     "EventName": "LS_INEF_SW_PREF.MAB_MCH_CNT",
     "EventCode": "0x52",
-    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. MAB_MCH_CNT",
-    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. MAB_MCH_CNT",
+    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. Event name: MAB_MCH_CNT",
+    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. Event name: MAB_MCH_CNT",
     "UMask": "0x2"
   },
   {
     "EventName": "LS_INEF_SW_PREF.DATA_PIPE_SW_PF_DC_HIT",
     "EventCode": "0x52",
-    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. DATA_PIPE_SW_PF_DC_HIT",
-    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. DATA_PIPE_SW_PF_DC_HIT",
+    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. Event name: DATA_PIPE_SW_PF_DC_HIT",
+    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. Event name: DATA_PIPE_SW_PF_DC_HIT",
     "UMask": "0x1"
   },
   {
@@ -539,8 +539,8 @@
   {
     "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALSQ3_0_TOKEN_STALL",
     "EventCode": "0xaf",
-    "BriefDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ3_0_TOKEN_STALL",
-    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ3_0_TOKEN_STALL",
+    "BriefDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. Event name: ALSQ3_0_TOKEN_STALL",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. Event name: ALSQ3_0_TOKEN_STALL",
     "UMask": "0x8"
   },
   {
@@ -689,50 +689,50 @@
   {
     "EventName": "L2_REQUEST_G1.RD_BLK_L",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. RD_BLK_L",
-    "PublicDescription": "Requests to L2 Group1. RD_BLK_L",
+    "BriefDescription": "Requests to L2 Group1. Event name: RD_BLK_L",
+    "PublicDescription": "Requests to L2 Group1. Event name: RD_BLK_L",
     "UMask": "0x80"
   },
   {
     "EventName": "L2_REQUEST_G1.RD_BLK_X",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. RD_BLK_X",
-    "PublicDescription": "Requests to L2 Group1. RD_BLK_X",
+    "BriefDescription": "Requests to L2 Group1. Event name: RD_BLK_X",
+    "PublicDescription": "Requests to L2 Group1. Event name: RD_BLK_X",
     "UMask": "0x40"
   },
   {
     "EventName": "L2_REQUEST_G1.LS_RD_BLK_C_S",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
-    "PublicDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
+    "BriefDescription": "Requests to L2 Group1. Event name: LS_RD_BLK_C_S",
+    "PublicDescription": "Requests to L2 Group1. Event name: LS_RD_BLK_C_S",
     "UMask": "0x20"
   },
   {
     "EventName": "L2_REQUEST_G1.CACHEABLE_IC_READ",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
-    "PublicDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
+    "BriefDescription": "Requests to L2 Group1. Event name: CACHEABLE_IC_READ",
+    "PublicDescription": "Requests to L2 Group1. Event name: CACHEABLE_IC_READ",
     "UMask": "0x10"
   },
   {
     "EventName": "L2_REQUEST_G1.CHANGE_TO_X",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. CHANGE_TO_X",
-    "PublicDescription": "Requests to L2 Group1. CHANGE_TO_X",
+    "BriefDescription": "Requests to L2 Group1. Event name: CHANGE_TO_X",
+    "PublicDescription": "Requests to L2 Group1. Event name: CHANGE_TO_X",
     "UMask": "0x8"
   },
   {
     "EventName": "L2_REQUEST_G1.PREFETCH_L2",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. PREFETCH_L2",
-    "PublicDescription": "Requests to L2 Group1. PREFETCH_L2",
+    "BriefDescription": "Requests to L2 Group1. Event name: PREFETCH_L2",
+    "PublicDescription": "Requests to L2 Group1. Event name: PREFETCH_L2",
     "UMask": "0x4"
   },
   {
     "EventName": "L2_REQUEST_G1.L2_HW_PF",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. L2_HW_PF",
-    "PublicDescription": "Requests to L2 Group1. L2_HW_PF",
+    "BriefDescription": "Requests to L2 Group1. Event name: L2_HW_PF",
+    "PublicDescription": "Requests to L2 Group1. Event name: L2_HW_PF",
     "UMask": "0x2"
   },
   {
@@ -766,71 +766,71 @@
   {
     "EventName": "L2_REQUEST_G2.IC_RD_SIZED",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: IC_RD_SIZED",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: IC_RD_SIZED",
     "UMask": "0x10"
   },
   {
     "EventName": "L2_REQUEST_G2.IC_RD_SIZED_NC",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: IC_RD_SIZED_NC",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: IC_RD_SIZED_NC",
     "UMask": "0x8"
   },
   {
     "EventName": "L2_REQUEST_G2.SMC_INVAL",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: SMC_INVAL",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: SMC_INVAL",
     "UMask": "0x4"
   },
   {
     "EventName": "L2_REQUEST_G2.BUS_LOCKS_ORIGINATOR",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: BUS_LOCKS_ORIGINATOR",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: BUS_LOCKS_ORIGINATOR",
     "UMask": "0x2"
   },
   {
     "EventName": "L2_REQUEST_G2.BUS_LOCKS_RESPONSES",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: BUS_LOCKS_RESPONSES",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: BUS_LOCKS_RESPONSES",
     "UMask": "0x1"
   },
   {
     "EventName": "L2_LATENCY.L2_CYCLES_WAITING_ON_FILLS",
     "EventCode": "0x62",
-    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
-    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
+    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. Event name: L2_CYCLES_WAITING_ON_FILLS",
+    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. Event name: L2_CYCLES_WAITING_ON_FILLS",
     "UMask": "0x1"
   },
   {
     "EventName": "L2_WBC_REQ.WCB_WRITE",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. WCB_WRITE",
-    "PublicDescription": "LS to L2 WBC requests. WCB_WRITE",
+    "BriefDescription": "LS to L2 WBC requests. Event name: WCB_WRITE",
+    "PublicDescription": "LS to L2 WBC requests. Event name: WCB_WRITE",
     "UMask": "0x40"
   },
   {
     "EventName": "L2_WBC_REQ.WCB_CLOSE",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. WCB_CLOSE",
-    "PublicDescription": "LS to L2 WBC requests. WCB_CLOSE",
+    "BriefDescription": "LS to L2 WBC requests. Event name: WCB_CLOSE",
+    "PublicDescription": "LS to L2 WBC requests. Event name: WCB_CLOSE",
     "UMask": "0x20"
   },
   {
     "EventName": "L2_WBC_REQ.CACHE_LINE_FLUSH",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
-    "PublicDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
+    "BriefDescription": "LS to L2 WBC requests. Event name: CACHE_LINE_FLUSH",
+    "PublicDescription": "LS to L2 WBC requests. Event name: CACHE_LINE_FLUSH",
     "UMask": "0x10"
   },
   {
     "EventName": "L2_WBC_REQ.I_LINE_FLUSH",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
-    "PublicDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
+    "BriefDescription": "LS to L2 WBC requests. Event name: I_LINE_FLUSH",
+    "PublicDescription": "LS to L2 WBC requests. Event name: I_LINE_FLUSH",
     "UMask": "0x8"
   },
   {
@@ -913,8 +913,8 @@
   {
     "EventName": "L2_FILL_PENDING.L2_FILL_BUSY",
     "EventCode": "0x6d",
-    "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",
-    "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",
+    "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2. Event name: L2_FILL_BUSY",
+    "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2. Event name: L2_FILL_BUSY",
     "UMask": "0x1"
   }
 ]
