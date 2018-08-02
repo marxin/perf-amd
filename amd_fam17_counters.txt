@@ -597,13 +597,13 @@ IcRdSizedNC. Read-write. Reset: 0.
 SmcInval. Read-write. Reset: 0.
 BusLocksOriginator. Read-write. Reset: 0.
 BusLocksResponses. Read-write. Reset: 0.
-PMCx062 [L2 Latency] (L2Latancy)
+PMCx062 [L2 Latency] (L2Latency)
 Read-write. Reset: 00h.
 Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to
 calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit
 mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average
 latency, the number of fills from both threads must be used.
-Core::X86::Pmc::Core::L2Latancy; PMCx062
+Core::X86::Pmc::Core::L2Latency; PMCx062
 Bits
 7:1
 0
