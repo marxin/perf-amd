@@ -23,8 +23,8 @@
   {
     "EventName": "de_dis_dispatch_token_stalls0.alsq3_0_token_stall",
     "EventCode": "0xaf",
-    "BriefDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. Event name: alsq3_0_token_stall",
-    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. Event name: alsq3_0_token_stall",
+    "BriefDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
     "UMask": "0x8"
   },
   {

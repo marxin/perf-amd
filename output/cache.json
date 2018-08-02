@@ -101,50 +101,50 @@
   {
     "EventName": "l2_request_g1.rd_blk_l",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: rd_blk_l",
-    "PublicDescription": "Requests to L2 Group1. Event name: rd_blk_l",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x80"
   },
   {
     "EventName": "l2_request_g1.rd_blk_x",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: rd_blk_x",
-    "PublicDescription": "Requests to L2 Group1. Event name: rd_blk_x",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x40"
   },
   {
     "EventName": "l2_request_g1.ls_rd_blk_c_s",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: ls_rd_blk_c_s",
-    "PublicDescription": "Requests to L2 Group1. Event name: ls_rd_blk_c_s",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x20"
   },
   {
     "EventName": "l2_request_g1.cacheable_ic_read",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: cacheable_ic_read",
-    "PublicDescription": "Requests to L2 Group1. Event name: cacheable_ic_read",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x10"
   },
   {
     "EventName": "l2_request_g1.change_to_x",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: change_to_x",
-    "PublicDescription": "Requests to L2 Group1. Event name: change_to_x",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x8"
   },
   {
     "EventName": "l2_request_g1.prefetch_l2",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: prefetch_l2",
-    "PublicDescription": "Requests to L2 Group1. Event name: prefetch_l2",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x4"
   },
   {
     "EventName": "l2_request_g1.l2_hw_pf",
     "EventCode": "0x60",
-    "BriefDescription": "Requests to L2 Group1. Event name: l2_hw_pf",
-    "PublicDescription": "Requests to L2 Group1. Event name: l2_hw_pf",
+    "BriefDescription": "Requests to L2 Group1.",
+    "PublicDescription": "Requests to L2 Group1.",
     "UMask": "0x2"
   },
   {
@@ -178,71 +178,71 @@
   {
     "EventName": "l2_request_g2.ic_rd_sized",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: ic_rd_sized",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: ic_rd_sized",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
     "UMask": "0x10"
   },
   {
     "EventName": "l2_request_g2.ic_rd_sized_nc",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: ic_rd_sized_nc",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: ic_rd_sized_nc",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
     "UMask": "0x8"
   },
   {
     "EventName": "l2_request_g2.smc_inval",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: smc_inval",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: smc_inval",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
     "UMask": "0x4"
   },
   {
     "EventName": "l2_request_g2.bus_locks_originator",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: bus_locks_originator",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: bus_locks_originator",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
     "UMask": "0x2"
   },
   {
     "EventName": "l2_request_g2.bus_locks_responses",
     "EventCode": "0x61",
-    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: bus_locks_responses",
-    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. Event name: bus_locks_responses",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous.",
     "UMask": "0x1"
   },
   {
     "EventName": "l2_latency.l2_cycles_waiting_on_fills",
     "EventCode": "0x62",
-    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask l2_request_g1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. Event name: l2_cycles_waiting_on_fills",
-    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask l2_request_g1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. Event name: l2_cycles_waiting_on_fills",
+    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask l2_request_g1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used.",
+    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask l2_request_g1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used.",
     "UMask": "0x1"
   },
   {
     "EventName": "l2_wbc_req.wcb_write",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. Event name: wcb_write",
-    "PublicDescription": "LS to L2 WBC requests. Event name: wcb_write",
+    "BriefDescription": "LS to L2 WBC requests.",
+    "PublicDescription": "LS to L2 WBC requests.",
     "UMask": "0x40"
   },
   {
     "EventName": "l2_wbc_req.wcb_close",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. Event name: wcb_close",
-    "PublicDescription": "LS to L2 WBC requests. Event name: wcb_close",
+    "BriefDescription": "LS to L2 WBC requests.",
+    "PublicDescription": "LS to L2 WBC requests.",
     "UMask": "0x20"
   },
   {
     "EventName": "l2_wbc_req.cache_line_flush",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. Event name: cache_line_flush",
-    "PublicDescription": "LS to L2 WBC requests. Event name: cache_line_flush",
+    "BriefDescription": "LS to L2 WBC requests.",
+    "PublicDescription": "LS to L2 WBC requests.",
     "UMask": "0x10"
   },
   {
     "EventName": "l2_wbc_req.i_line_flush",
     "EventCode": "0x63",
-    "BriefDescription": "LS to L2 WBC requests. Event name: i_line_flush",
-    "PublicDescription": "LS to L2 WBC requests. Event name: i_line_flush",
+    "BriefDescription": "LS to L2 WBC requests.",
+    "PublicDescription": "LS to L2 WBC requests.",
     "UMask": "0x8"
   },
   {
@@ -325,8 +325,8 @@
   {
     "EventName": "l2_fill_pending.l2_fill_busy",
     "EventCode": "0x6d",
-    "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2. Event name: l2_fill_busy",
-    "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2. Event name: l2_fill_busy",
+    "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2.",
+    "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2.",
     "UMask": "0x1"
   }
 ]
