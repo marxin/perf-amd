@@ -738,8 +738,8 @@
   {
     "EventName": "L2_REQUEST_G1.OTHER_REQUESTS",
     "EventCode": "0x60",
-    "BriefDescription": "Events covered by Core::X86::Pmc::Core::L2RequestG2.",
-    "PublicDescription": "Requests to L2 Group1. Events covered by Core::X86::Pmc::Core::L2RequestG2.",
+    "BriefDescription": "Events covered by L2_REQUEST_G2.",
+    "PublicDescription": "Requests to L2 Group1. Events covered by L2_REQUEST_G2.",
     "UMask": "0x1"
   },
   {
@@ -801,8 +801,8 @@
   {
     "EventName": "L2_LATENCY.L2_CYCLES_WAITING_ON_FILLS",
     "EventCode": "0x62",
-    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
-    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
+    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
+    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask L2_REQUEST_G1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
     "UMask": "0x1"
   },
   {
@@ -836,8 +836,8 @@
   {
     "EventName": "L2_WBC_REQ.ZERO_BYTE_STORE",
     "EventCode": "0x63",
-    "BriefDescription": "This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
-    "PublicDescription": "LS to L2 WBC requests. This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
+    "BriefDescription": "This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in L2_REQUEST_G2.",
+    "PublicDescription": "LS to L2 WBC requests. This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in L2_REQUEST_G2.",
     "UMask": "0x4"
   },
   {
