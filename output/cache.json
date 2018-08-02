@@ -35,21 +35,21 @@
     "BriefDescription": "The number of pipeline restarts caused by invalidating probes that hit on the instruction stream currently being executed. This would happen if the active instruction stream was being modified by another processor in an MP system - typically a highly unlikely event."
   },
   {
-    "EventName": "IC_STALL_ANY",
+    "EventName": "IC_FETCH_STALL.IC_STALL_ANY",
     "EventCode": "0x87",
     "BriefDescription": "IC pipe was stalled during this clock cycle for any reason (nothing valid in pipe ICM1).",
     "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle for any reason (nothing valid in pipe ICM1).",
     "UMask": "0x4"
   },
   {
-    "EventName": "IC_STALL_DQ_EMPTY",
+    "EventName": "IC_FETCH_STALL.IC_STALL_DQ_EMPTY",
     "EventCode": "0x87",
     "BriefDescription": "IC pipe was stalled during this clock cycle (including IC to OC fetches) due to DQ empty.",
     "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle (including IC to OC fetches) due to DQ empty.",
     "UMask": "0x2"
   },
   {
-    "EventName": "IC_STALL_BACK_PRESSURE",
+    "EventName": "IC_FETCH_STALL.IC_STALL_BACK_PRESSURE",
     "EventCode": "0x87",
     "BriefDescription": "IC pipe was stalled during this clock cycle (including IC to OC fetches) due to back-pressure.",
     "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle (including IC to OC fetches) due to back-pressure.",
@@ -66,14 +66,14 @@
     "BriefDescription": "L2 BTB Correction."
   },
   {
-    "EventName": "L2_INVALIDATING_PROBE",
+    "EventName": "IC_CACHE_INVAL.L2_INVALIDATING_PROBE",
     "EventCode": "0x8c",
     "BriefDescription": "IC line invalidated due to L2 invalidating probe (external or LS).",
     "PublicDescription": "The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code), either from the other thread of the core or another core. IC line invalidated due to L2 invalidating probe (external or LS).",
     "UMask": "0x2"
   },
   {
-    "EventName": "FILL_INVALIDATED",
+    "EventName": "IC_CACHE_INVAL.FILL_INVALIDATED",
     "EventCode": "0x8c",
     "BriefDescription": "IC line invalidated due to overwriting fill response.",
     "PublicDescription": "The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code), either from the other thread of the core or another core. IC line invalidated due to overwriting fill response.",
@@ -85,14 +85,14 @@
     "BriefDescription": "The number of ITLB reload requests."
   },
   {
-    "EventName": "OC_IC_MODE_SWITCH",
+    "EventName": "IC_OC_MODE_SWITCH.OC_IC_MODE_SWITCH",
     "EventCode": "0x28a",
     "BriefDescription": "OC to IC mode switch.",
     "PublicDescription": "OC Mode Switch. OC to IC mode switch.",
     "UMask": "0x2"
   },
   {
-    "EventName": "IC_OC_MODE_SWITCH",
+    "EventName": "IC_OC_MODE_SWITCH.IC_OC_MODE_SWITCH",
     "EventCode": "0x28a",
     "BriefDescription": "IC to OC mode switch.",
     "PublicDescription": "OC Mode Switch. IC to OC mode switch.",
@@ -100,231 +100,231 @@
   }
 ][
   {
-    "EventName": "RD_BLK_L",
+    "EventName": "L2_REQUEST_G1.RD_BLK_L",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. RD_BLK_L",
     "PublicDescription": "Requests to L2 Group1. RD_BLK_L",
     "UMask": "0x80"
   },
   {
-    "EventName": "RD_BLK_X",
+    "EventName": "L2_REQUEST_G1.RD_BLK_X",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. RD_BLK_X",
     "PublicDescription": "Requests to L2 Group1. RD_BLK_X",
     "UMask": "0x40"
   },
   {
-    "EventName": "LS_RD_BLK_C_S",
+    "EventName": "L2_REQUEST_G1.LS_RD_BLK_C_S",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
     "PublicDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
     "UMask": "0x20"
   },
   {
-    "EventName": "CACHEABLE_IC_READ",
+    "EventName": "L2_REQUEST_G1.CACHEABLE_IC_READ",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
     "PublicDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
     "UMask": "0x10"
   },
   {
-    "EventName": "CHANGE_TO_X",
+    "EventName": "L2_REQUEST_G1.CHANGE_TO_X",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. CHANGE_TO_X",
     "PublicDescription": "Requests to L2 Group1. CHANGE_TO_X",
     "UMask": "0x8"
   },
   {
-    "EventName": "PREFETCH_L2",
+    "EventName": "L2_REQUEST_G1.PREFETCH_L2",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. PREFETCH_L2",
     "PublicDescription": "Requests to L2 Group1. PREFETCH_L2",
     "UMask": "0x4"
   },
   {
-    "EventName": "L2_HW_PF",
+    "EventName": "L2_REQUEST_G1.L2_HW_PF",
     "EventCode": "0x60",
     "BriefDescription": "Requests to L2 Group1. L2_HW_PF",
     "PublicDescription": "Requests to L2 Group1. L2_HW_PF",
     "UMask": "0x2"
   },
   {
-    "EventName": "OTHER_REQUESTS",
+    "EventName": "L2_REQUEST_G1.OTHER_REQUESTS",
     "EventCode": "0x60",
     "BriefDescription": "Events covered by Core::X86::Pmc::Core::L2RequestG2.",
     "PublicDescription": "Requests to L2 Group1. Events covered by Core::X86::Pmc::Core::L2RequestG2.",
     "UMask": "0x1"
   },
   {
-    "EventName": "GROUP1",
+    "EventName": "L2_REQUEST_G2.GROUP1",
     "EventCode": "0x61",
     "BriefDescription": "All Group 1 commands not in unit0.",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. All Group 1 commands not in unit0.",
     "UMask": "0x80"
   },
   {
-    "EventName": "LS_RD_SIZED",
+    "EventName": "L2_REQUEST_G2.LS_RD_SIZED",
     "EventCode": "0x61",
     "BriefDescription": "RdSized, RdSized32, RdSized64.",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. RdSized, RdSized32, RdSized64.",
     "UMask": "0x40"
   },
   {
-    "EventName": "LS_RD_SIZED_NC",
+    "EventName": "L2_REQUEST_G2.LS_RD_SIZED_NC",
     "EventCode": "0x61",
     "BriefDescription": "RdSizedNC, RdSized32NC, RdSized64NC.",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. RdSizedNC, RdSized32NC, RdSized64NC.",
     "UMask": "0x20"
   },
   {
-    "EventName": "IC_RD_SIZED",
+    "EventName": "L2_REQUEST_G2.IC_RD_SIZED",
     "EventCode": "0x61",
     "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
     "UMask": "0x10"
   },
   {
-    "EventName": "IC_RD_SIZED_NC",
+    "EventName": "L2_REQUEST_G2.IC_RD_SIZED_NC",
     "EventCode": "0x61",
     "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
     "UMask": "0x8"
   },
   {
-    "EventName": "SMC_INVAL",
+    "EventName": "L2_REQUEST_G2.SMC_INVAL",
     "EventCode": "0x61",
     "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
     "UMask": "0x4"
   },
   {
-    "EventName": "BUS_LOCKS_ORIGINATOR",
+    "EventName": "L2_REQUEST_G2.BUS_LOCKS_ORIGINATOR",
     "EventCode": "0x61",
     "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
     "UMask": "0x2"
   },
   {
-    "EventName": "BUS_LOCKS_RESPONSES",
+    "EventName": "L2_REQUEST_G2.BUS_LOCKS_RESPONSES",
     "EventCode": "0x61",
     "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
     "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
     "UMask": "0x1"
   },
   {
-    "EventName": "L2_CYCLES_WAITING_ON_FILLS",
+    "EventName": "L2_LATENCY.L2_CYCLES_WAITING_ON_FILLS",
     "EventCode": "0x62",
     "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
     "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
     "UMask": "0x1"
   },
   {
-    "EventName": "WCB_WRITE",
+    "EventName": "L2_WBC_REQ.WCB_WRITE",
     "EventCode": "0x63",
     "BriefDescription": "LS to L2 WBC requests. WCB_WRITE",
     "PublicDescription": "LS to L2 WBC requests. WCB_WRITE",
     "UMask": "0x40"
   },
   {
-    "EventName": "WCB_CLOSE",
+    "EventName": "L2_WBC_REQ.WCB_CLOSE",
     "EventCode": "0x63",
     "BriefDescription": "LS to L2 WBC requests. WCB_CLOSE",
     "PublicDescription": "LS to L2 WBC requests. WCB_CLOSE",
     "UMask": "0x20"
   },
   {
-    "EventName": "CACHE_LINE_FLUSH",
+    "EventName": "L2_WBC_REQ.CACHE_LINE_FLUSH",
     "EventCode": "0x63",
     "BriefDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
     "PublicDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
     "UMask": "0x10"
   },
   {
-    "EventName": "I_LINE_FLUSH",
+    "EventName": "L2_WBC_REQ.I_LINE_FLUSH",
     "EventCode": "0x63",
     "BriefDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
     "PublicDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
     "UMask": "0x8"
   },
   {
-    "EventName": "ZERO_BYTE_STORE",
+    "EventName": "L2_WBC_REQ.ZERO_BYTE_STORE",
     "EventCode": "0x63",
     "BriefDescription": "This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
     "PublicDescription": "LS to L2 WBC requests. This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
     "UMask": "0x4"
   },
   {
-    "EventName": "LOCAL_IC_CLR",
+    "EventName": "L2_WBC_REQ.LOCAL_IC_CLR",
     "EventCode": "0x63",
     "BriefDescription": "Local IC Clear.",
     "PublicDescription": "LS to L2 WBC requests. Local IC Clear.",
     "UMask": "0x2"
   },
   {
-    "EventName": "CL_ZERO",
+    "EventName": "L2_WBC_REQ.CL_ZERO",
     "EventCode": "0x63",
     "BriefDescription": "Cache Line Zero.",
     "PublicDescription": "LS to L2 WBC requests. Cache Line Zero.",
     "UMask": "0x1"
   },
   {
-    "EventName": "LS_RD_BLK_CS",
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_CS",
     "EventCode": "0x64",
     "BriefDescription": "LS ReadBlock C/S Hit.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS ReadBlock C/S Hit.",
     "UMask": "0x80"
   },
   {
-    "EventName": "LS_RD_BLK_L_HIT_X",
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_L_HIT_X",
     "EventCode": "0x64",
     "BriefDescription": "LS Read Block L Hit X.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS Read Block L Hit X.",
     "UMask": "0x40"
   },
   {
-    "EventName": "LS_RD_BLK_L_HIT_S",
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_L_HIT_S",
     "EventCode": "0x64",
     "BriefDescription": "LsRdBlkL Hit Shared.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LsRdBlkL Hit Shared.",
     "UMask": "0x20"
   },
   {
-    "EventName": "LS_RD_BLK_X",
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_X",
     "EventCode": "0x64",
     "BriefDescription": "LsRdBlkX/ChgToX Hit X.  Count RdBlkX finding Shared as a Miss.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LsRdBlkX/ChgToX Hit X.  Count RdBlkX finding Shared as a Miss.",
     "UMask": "0x10"
   },
   {
-    "EventName": "LS_RD_BLK_C",
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_C",
     "EventCode": "0x64",
     "BriefDescription": "LS Read Block C S L X Change to X Miss.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS Read Block C S L X Change to X Miss.",
     "UMask": "0x8"
   },
   {
-    "EventName": "IC_FILL_HIT_X",
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_HIT_X",
     "EventCode": "0x64",
     "BriefDescription": "IC Fill Hit Exclusive Stale.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Hit Exclusive Stale.",
     "UMask": "0x4"
   },
   {
-    "EventName": "IC_FILL_HIT_S",
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_HIT_S",
     "EventCode": "0x64",
     "BriefDescription": "IC Fill Hit Shared.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Hit Shared.",
     "UMask": "0x2"
   },
   {
-    "EventName": "IC_FILL_MISS",
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_MISS",
     "EventCode": "0x64",
     "BriefDescription": "IC Fill Miss.",
     "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Miss.",
     "UMask": "0x1"
   },
   {
-    "EventName": "L2_FILL_BUSY",
+    "EventName": "L2_FILL_PENDING.L2_FILL_BUSY",
     "EventCode": "0x6d",
     "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",
     "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",

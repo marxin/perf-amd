@@ -55,21 +55,21 @@
     "BriefDescription": "Retired Indirect Branch Instructions Mispredicted."
   },
   {
-    "EventName": "SSE_INSTR",
+    "EventName": "EX_RET_MMX_FP_INSTR.SSE_INSTR",
     "EventCode": "0xcb",
     "BriefDescription": "SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42, AVX).",
     "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42, AVX).",
     "UMask": "0x4"
   },
   {
-    "EventName": "MMX_INSTR",
+    "EventName": "EX_RET_MMX_FP_INSTR.MMX_INSTR",
     "EventCode": "0xcb",
     "BriefDescription": "MMX instructions.",
     "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. MMX instructions.",
     "UMask": "0x2"
   },
   {
-    "EventName": "X87_INSTR",
+    "EventName": "EX_RET_MMX_FP_INSTR.X87_INSTR",
     "EventCode": "0xcb",
     "BriefDescription": "x87 instructions.",
     "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. x87 instructions.",
@@ -96,21 +96,21 @@
     "BriefDescription": "Div Op Count."
   },
   {
-    "EventName": "IBS_COUNT_ROLLOVER",
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_COUNT_ROLLOVER",
     "EventCode": "0x1cf",
     "BriefDescription": "Number of times an op could not be tagged by IBS because of a previous tagged op that has not retired.",
     "PublicDescription": "Tagged IBS Ops. Number of times an op could not be tagged by IBS because of a previous tagged op that has not retired.",
     "UMask": "0x4"
   },
   {
-    "EventName": "IBS_TAGGED_OPS_RET",
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_TAGGED_OPS_RET",
     "EventCode": "0x1cf",
     "BriefDescription": "Number of Ops tagged by IBS that retired.",
     "PublicDescription": "Tagged IBS Ops. Number of Ops tagged by IBS that retired.",
     "UMask": "0x2"
   },
   {
-    "EventName": "IBS_TAGGED_OPS",
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_TAGGED_OPS",
     "EventCode": "0x1cf",
     "BriefDescription": "Number of Ops tagged by IBS.",
     "PublicDescription": "Tagged IBS Ops. Number of Ops tagged by IBS.",
