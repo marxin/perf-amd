@@ -147,6 +147,8 @@ result = 'output'
 shutil.rmtree(result, ignore_errors = True)
 os.mkdir(result)
 
+result_json = {}
+
 for s in sections:
     results = []
     for g in s.groups:
@@ -165,7 +167,11 @@ for s in sections:
                     d = {'EventName': g.get_event_name() + '.' + v.get_name(), 'EventCode': g.pmc, 'BriefDescription': description,
                             'PublicDescription': full_description, 'UMask': v.get_mask()}
                     results.append(d)
-
     f = section_mapping[s.name]
+    if not f in result_json:
+        result_json[f] = []
+    result_json[f] += results
+
+for f in result_json.keys():
     with open(os.path.join(result, f), 'a') as outfile:
-        json.dump(results, outfile, indent = 2)
+        json.dump(result_json[f], outfile, indent = 2)

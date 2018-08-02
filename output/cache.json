@@ -97,8 +97,7 @@
     "BriefDescription": "IC to OC mode switch.",
     "PublicDescription": "OC Mode Switch. IC to OC mode switch.",
     "UMask": "0x1"
-  }
-][
+  },
   {
     "EventName": "L2_REQUEST_G1.RD_BLK_L",
     "EventCode": "0x60",
