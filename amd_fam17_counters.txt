@@ -65,12 +65,12 @@ Bits
 1
 0
 Description
-DpMultAddFlops: Double precision multiply-add FLOPS. Read-write. Reset: 0. Multiply-add counts
+DpMultAddFlops: Double precision multiply-add FLOPS. Read-write. Reset: 0.Multiply-add counts
 as 2 FLOPS.
 DpDivFlops: Double precision divide/square root FLOPS. Read-write. Reset: 0.
 DpMultFlops: Double precision multiply FLOPS. Read-write. Reset: 0.
 DpAddSubFlops: Double precision add/subtract FLOPS. Read-write. Reset: 0.
-SpMultAddFlops: Single precision multiply-add FLOPS. Read-write. Reset: 0. Multiply-add counts
+SpMultAddFlops: Single precision multiply-add FLOPS. Read-write. Reset: 0.Multiply-add counts
 as 2 FLOPS.
 SpDivFlops: Single-precision divide/square root FLOPS. Read-write. Reset: 0.
 SpMultFlops: Single-precision multiply FLOPS. Read-write. Reset: 0.
