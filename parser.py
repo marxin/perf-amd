@@ -2,8 +2,17 @@
 
 import json
 import re
+import os
+import shutil
 
 from itertools import *
+
+section_mapping = {'Floating Point (FP)': 'floating-point.json',
+        'LS': 'memory.json',
+        'IC and BP': 'cache.json',
+        'DE': 'other.json',
+        'EX (SC)': 'core.json',
+        'L2 Cache': 'cache.json'}
 
 def convert(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
@@ -134,8 +143,12 @@ for s in sections:
         for v in g.values:
             print('   XXX ' + v.get_name() + ':' + v.description)
 
-results = []
+result = 'output'
+shutil.rmtree(result, ignore_errors = True)
+os.mkdir(result)
+
 for s in sections:
+    results = []
     for g in s.groups:
         if len(g.values) == 1:
             assert g.values[0].get_name() == 'RESERVED'
@@ -153,5 +166,6 @@ for s in sections:
                             'PublicDescription': full_description, 'UMask': v.get_mask()}
                     results.append(d)
 
-with open('other.json', 'w') as outfile:
-    json.dump(results, outfile, indent = 2)
+    f = section_mapping[s.name]
+    with open(os.path.join(result, f), 'a') as outfile:
+        json.dump(results, outfile, indent = 2)
