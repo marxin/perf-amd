@@ -148,6 +148,7 @@ shutil.rmtree(result, ignore_errors = True)
 os.mkdir(result)
 
 result_json = {}
+all_results = []
 
 for s in sections:
     results = []
@@ -171,7 +172,11 @@ for s in sections:
     if not f in result_json:
         result_json[f] = []
     result_json[f] += results
+    all_results += results
 
 for f in result_json.keys():
     with open(os.path.join(result, f), 'a') as outfile:
         json.dump(result_json[f], outfile, indent = 2)
+
+with open('all-events.json', 'w') as outfile:
+    json.dump(all_results, outfile, indent = 2)

@@ -1,0 +1,920 @@
+[
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.DUAL3",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 3.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 3.",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.DUAL2",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 2.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 2.",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.DUAL1",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 1.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 1.",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.DUAL0",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number multi-pipe uOps assigned to Pipe 0.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number multi-pipe uOps assigned to Pipe 0.",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL3",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number uOps assigned to Pipe 3.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 3.",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL2",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number uOps assigned to Pipe 2.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 2.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL1",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number uOps assigned to Pipe 1.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 1.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "FPU_PIPE_ASSIGNMENT.TOTAL0",
+    "EventCode": "0x00",
+    "BriefDescription": "Total number uOps assigned to Pipe 0.",
+    "PublicDescription": "Read-only. Reset: 00h. The number of operations (uOps) and dual-pipe uOps dispatched to each of the 4 FPU execution pipelines. This event reflects how busy the FPU pipelines are and may be used for workload characterization. This includes all operations performed by x87, MMXTM, and SSE instructions, including moves. Each increment represents a one- cycle dispatch event. This event is a speculative event. (See Core::X86::Pmc::Core::ExRetMmxFpInstr). Since this event includes non-numeric operations it is not suitable for measuring MFLOPS. Total number uOps assigned to Pipe 0.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "FP_SCHED_EMPTY",
+    "EventCode": "0x01",
+    "BriefDescription": "This is a speculative event. The number of cycles in which the FPU scheduler is empty. Note that some Ops like FP loads bypass the scheduler. Invert this (Core::X86::Msr::PERF_CTL[Inv] == 1) to count cycles in which at least one FPU operation is present in the FPU."
+  },
+  {
+    "EventName": "FP_RETX87_FP_OPS.DIV_SQR_R_OPS",
+    "EventCode": "0x02",
+    "BriefDescription": "Divide and square root Ops.",
+    "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8. Divide and square root Ops.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "FP_RETX87_FP_OPS.MUL_OPS",
+    "EventCode": "0x02",
+    "BriefDescription": "Multiply Ops.",
+    "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8. Multiply Ops.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "FP_RETX87_FP_OPS.ADD_SUB_OPS",
+    "EventCode": "0x02",
+    "BriefDescription": "Add/subtract Ops.",
+    "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8. Add/subtract Ops.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.DP_MULT_ADD_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Double precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.DP_DIV_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Double precision divide/square root FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision divide/square root FLOPS.",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.DP_MULT_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Double precision multiply FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision multiply FLOPS.",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.DP_ADD_SUB_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Double precision add/subtract FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Double precision add/subtract FLOPS.",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.SP_MULT_ADD_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Single precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single precision multiply-add FLOPS.  Multiply-add counts as 2 FLOPS.",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.SP_DIV_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Single-precision divide/square root FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision divide/square root FLOPS.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.SP_MULT_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Single-precision multiply FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision multiply FLOPS.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "FP_RET_SSE_AVX_OPS.SP_ADD_SUB_FLOPS",
+    "EventCode": "0x03",
+    "BriefDescription": "Single-precision add/subtract FLOPS.",
+    "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPS. The number of events logged per cycle can vary from 0 to 64. This event can count above 15. See 2.1.13.2 [Large Increment per Cycle Events]. Single-precision add/subtract FLOPS.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "FP_NUM_MOV_ELIM_SCAL_OP.OPTIMIZED",
+    "EventCode": "0x04",
+    "BriefDescription": "Number of Scalar Ops optimized.",
+    "PublicDescription": "This is a dispatch based speculative event, and is useful for measuring the effectiveness of the Move elimination and Scalar code optimization schemes. Number of Scalar Ops optimized.",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "FP_NUM_MOV_ELIM_SCAL_OP.OPT_POTENTIAL",
+    "EventCode": "0x04",
+    "BriefDescription": "Number of Ops that are candidates for optimization (have Z-bit either set or pass).",
+    "PublicDescription": "This is a dispatch based speculative event, and is useful for measuring the effectiveness of the Move elimination and Scalar code optimization schemes. Number of Ops that are candidates for optimization (have Z-bit either set or pass).",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "FP_NUM_MOV_ELIM_SCAL_OP.SSE_MOV_OPS_ELIM",
+    "EventCode": "0x04",
+    "BriefDescription": "Number of SSE Move Ops eliminated.",
+    "PublicDescription": "This is a dispatch based speculative event, and is useful for measuring the effectiveness of the Move elimination and Scalar code optimization schemes. Number of SSE Move Ops eliminated.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "FP_NUM_MOV_ELIM_SCAL_OP.SSE_MOV_OPS",
+    "EventCode": "0x04",
+    "BriefDescription": "Number of SSE Move Ops.",
+    "PublicDescription": "This is a dispatch based speculative event, and is useful for measuring the effectiveness of the Move elimination and Scalar code optimization schemes. Number of SSE Move Ops.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "FP_RETIRED_SER_OPS.X87_CTRL_RET",
+    "EventCode": "0x05",
+    "BriefDescription": "x87 control word mispredict traps due to mispredictions in RC or PC, or changes in mask bits.",
+    "PublicDescription": "The number of serializing Ops retired. x87 control word mispredict traps due to mispredictions in RC or PC, or changes in mask bits.",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "FP_RETIRED_SER_OPS.X87_BOT_RET",
+    "EventCode": "0x05",
+    "BriefDescription": "x87 bottom-executing uOps retired.",
+    "PublicDescription": "The number of serializing Ops retired. x87 bottom-executing uOps retired.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "FP_RETIRED_SER_OPS.SSE_CTRL_RET",
+    "EventCode": "0x05",
+    "BriefDescription": "SSE control word mispredict traps due to mispredictions in RC, FTZ or DAZ, or changes in mask bits.",
+    "PublicDescription": "The number of serializing Ops retired. SSE control word mispredict traps due to mispredictions in RC, FTZ or DAZ, or changes in mask bits.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "FP_RETIRED_SER_OPS.SSE_BOT_RET",
+    "EventCode": "0x05",
+    "BriefDescription": "SSE bottom-executing uOps retired.",
+    "PublicDescription": "The number of serializing Ops retired. SSE bottom-executing uOps retired.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_LOCKS.SPEC_LOCK_MAP_COMMIT",
+    "EventCode": "0x25",
+    "BriefDescription": "Unit Masks ORed. SPEC_LOCK_MAP_COMMIT",
+    "PublicDescription": "Unit Masks ORed. SPEC_LOCK_MAP_COMMIT",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "LS_LOCKS.SPEC_LOCK",
+    "EventCode": "0x25",
+    "BriefDescription": "Unit Masks ORed. SPEC_LOCK",
+    "PublicDescription": "Unit Masks ORed. SPEC_LOCK",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_LOCKS.NON_SPEC_LOCK",
+    "EventCode": "0x25",
+    "BriefDescription": "Unit Masks ORed. NON_SPEC_LOCK",
+    "PublicDescription": "Unit Masks ORed. NON_SPEC_LOCK",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_LOCKS.BUS_LOCK",
+    "EventCode": "0x25",
+    "BriefDescription": "Unit Masks ORed. BUS_LOCK",
+    "PublicDescription": "Unit Masks ORed. BUS_LOCK",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_DISPATCH.LD_ST_DISPATCH",
+    "EventCode": "0x29",
+    "BriefDescription": "Load-op-Stores.",
+    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Load-op-Stores.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_DISPATCH.STORE_DISPATCH",
+    "EventCode": "0x29",
+    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. STORE_DISPATCH",
+    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. STORE_DISPATCH",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_DISPATCH.LD_DISPATCH",
+    "EventCode": "0x29",
+    "BriefDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. LD_DISPATCH",
+    "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. LD_DISPATCH",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_STLF",
+    "EventCode": "0x35",
+    "BriefDescription": "Number of STLF hits."
+  },
+  {
+    "EventName": "LS_DC_ACCESSES",
+    "EventCode": "0x40",
+    "BriefDescription": "The number of accesses to the data cache for load and store references. This may include certain microcode scratchpad accesses, although these are generally rare. Each increment represents an eight-byte access, although the instruction may only be accessing a portion of that. This event is a speculative event."
+  },
+  {
+    "EventName": "LS_MAB_ALLOC_PIPE.TLB_PIPE_EARLY",
+    "EventCode": "0x41",
+    "BriefDescription": "MAB Allocation by Pipe. TLB_PIPE_EARLY",
+    "PublicDescription": "MAB Allocation by Pipe. TLB_PIPE_EARLY",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "LS_MAB_ALLOC_PIPE.HW_PF",
+    "EventCode": "0x41",
+    "BriefDescription": "MAB Allocation by Pipe. HW_PF",
+    "PublicDescription": "MAB Allocation by Pipe. HW_PF",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "LS_MAB_ALLOC_PIPE.TLB_PIPE_LATE",
+    "EventCode": "0x41",
+    "BriefDescription": "MAB Allocation by Pipe. TLB_PIPE_LATE",
+    "PublicDescription": "MAB Allocation by Pipe. TLB_PIPE_LATE",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_MAB_ALLOC_PIPE.ST_PIPE",
+    "EventCode": "0x41",
+    "BriefDescription": "MAB Allocation by Pipe. ST_PIPE",
+    "PublicDescription": "MAB Allocation by Pipe. ST_PIPE",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_MAB_ALLOC_PIPE.DATA_PIPE",
+    "EventCode": "0x41",
+    "BriefDescription": "MAB Allocation by Pipe. DATA_PIPE",
+    "PublicDescription": "MAB Allocation by Pipe. DATA_PIPE",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD1_GL2_MISS",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_MISS",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD2_ML2_MISS",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_MISS",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_MISS",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD32_KL2_MISS",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_MISS",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD4_KL2_MISS",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_MISS",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_MISS",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD1_GL2_HIT",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD1_GL2_HIT",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD2_ML2_HIT",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_HIT",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD2_ML2_HIT",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD32_KL2_HIT",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD32_KL2_HIT",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_L1_D_TLB_MISS.TLB_RELOAD4_KL2_HIT",
+    "EventCode": "0x45",
+    "BriefDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_HIT",
+    "PublicDescription": "L1 DTLB Miss. TLB_RELOAD4_KL2_HIT",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_ISIDE1",
+    "EventCode": "0x46",
+    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE1",
+    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE1",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_ISIDE0",
+    "EventCode": "0x46",
+    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE0",
+    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_ISIDE0",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_DSIDE1",
+    "EventCode": "0x46",
+    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE1",
+    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE1",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_TABLEWALKER.PERF_MON_TABLEWALK_ALLOC_DSIDE0",
+    "EventCode": "0x46",
+    "BriefDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE0",
+    "PublicDescription": "Tablewalker allocation. PERF_MON_TABLEWALK_ALLOC_DSIDE0",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_MISAL_ACCESSES",
+    "EventCode": "0x47",
+    "BriefDescription": "Misaligned loads."
+  },
+  {
+    "EventName": "LS_PREF_INSTR_DISP.PREFETCH_NTA",
+    "EventCode": "0x4b",
+    "BriefDescription": "Software Prefetch Instructions Dispatched. PREFETCH_NTA",
+    "PublicDescription": "Software Prefetch Instructions Dispatched. PREFETCH_NTA",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "LS_PREF_INSTR_DISP.STORE_PREFETCH_W",
+    "EventCode": "0x4b",
+    "BriefDescription": "Software Prefetch Instructions Dispatched. STORE_PREFETCH_W",
+    "PublicDescription": "Software Prefetch Instructions Dispatched. STORE_PREFETCH_W",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_PREF_INSTR_DISP.LOAD_PREFETCH_W",
+    "EventCode": "0x4b",
+    "BriefDescription": "Prefetch, Prefetch_T0_T1_T2.",
+    "PublicDescription": "Software Prefetch Instructions Dispatched. Prefetch, Prefetch_T0_T1_T2.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_INEF_SW_PREF.MAB_MCH_CNT",
+    "EventCode": "0x52",
+    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. MAB_MCH_CNT",
+    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. MAB_MCH_CNT",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "LS_INEF_SW_PREF.DATA_PIPE_SW_PF_DC_HIT",
+    "EventCode": "0x52",
+    "BriefDescription": "The number of software prefetches that did not fetch data outside of the processor core. DATA_PIPE_SW_PF_DC_HIT",
+    "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core. DATA_PIPE_SW_PF_DC_HIT",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "LS_NOT_HALTED_CYC",
+    "EventCode": "0x76",
+    "BriefDescription": "Cycles not in Halt."
+  },
+  {
+    "EventName": "IC_FW32",
+    "EventCode": "0x80",
+    "BriefDescription": "The number of 32B fetch windows transferred from IC pipe to DE instruction decoder (includes non-cacheable and cacheable fill responses)."
+  },
+  {
+    "EventName": "IC_FW32_MISS",
+    "EventCode": "0x81",
+    "BriefDescription": "The number of 32B fetch windows tried to read the L1 IC and missed in the full tag."
+  },
+  {
+    "EventName": "IC_CACHE_FILL_L2",
+    "EventCode": "0x82",
+    "BriefDescription": "The number of 64 byte instruction cache line was fulfilled from the L2 cache."
+  },
+  {
+    "EventName": "IC_CACHE_FILL_SYS",
+    "EventCode": "0x83",
+    "BriefDescription": "The number of 64 byte instruction cache line fulfilled from system memory or another cache."
+  },
+  {
+    "EventName": "BP_L1_TLB_MISS_L2_HIT",
+    "EventCode": "0x84",
+    "BriefDescription": "The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB."
+  },
+  {
+    "EventName": "BP_L1_TLB_MISS_L2_MISS",
+    "EventCode": "0x85",
+    "BriefDescription": "The number of instruction fetches that miss in both the L1 and L2 TLBs."
+  },
+  {
+    "EventName": "BP_SNP_RE_SYNC",
+    "EventCode": "0x86",
+    "BriefDescription": "The number of pipeline restarts caused by invalidating probes that hit on the instruction stream currently being executed. This would happen if the active instruction stream was being modified by another processor in an MP system - typically a highly unlikely event."
+  },
+  {
+    "EventName": "IC_FETCH_STALL.IC_STALL_ANY",
+    "EventCode": "0x87",
+    "BriefDescription": "IC pipe was stalled during this clock cycle for any reason (nothing valid in pipe ICM1).",
+    "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle for any reason (nothing valid in pipe ICM1).",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "IC_FETCH_STALL.IC_STALL_DQ_EMPTY",
+    "EventCode": "0x87",
+    "BriefDescription": "IC pipe was stalled during this clock cycle (including IC to OC fetches) due to DQ empty.",
+    "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle (including IC to OC fetches) due to DQ empty.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "IC_FETCH_STALL.IC_STALL_BACK_PRESSURE",
+    "EventCode": "0x87",
+    "BriefDescription": "IC pipe was stalled during this clock cycle (including IC to OC fetches) due to back-pressure.",
+    "PublicDescription": "Instruction Pipe Stall. IC pipe was stalled during this clock cycle (including IC to OC fetches) due to back-pressure.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "BP_L1_BTB_CORRECT",
+    "EventCode": "0x8a",
+    "BriefDescription": "L1 BTB Correction."
+  },
+  {
+    "EventName": "BP_L2_BTB_CORRECT",
+    "EventCode": "0x8b",
+    "BriefDescription": "L2 BTB Correction."
+  },
+  {
+    "EventName": "IC_CACHE_INVAL.L2_INVALIDATING_PROBE",
+    "EventCode": "0x8c",
+    "BriefDescription": "IC line invalidated due to L2 invalidating probe (external or LS).",
+    "PublicDescription": "The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code), either from the other thread of the core or another core. IC line invalidated due to L2 invalidating probe (external or LS).",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "IC_CACHE_INVAL.FILL_INVALIDATED",
+    "EventCode": "0x8c",
+    "BriefDescription": "IC line invalidated due to overwriting fill response.",
+    "PublicDescription": "The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code), either from the other thread of the core or another core. IC line invalidated due to overwriting fill response.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "BP_TLB_REL",
+    "EventCode": "0x99",
+    "BriefDescription": "The number of ITLB reload requests."
+  },
+  {
+    "EventName": "IC_OC_MODE_SWITCH.OC_IC_MODE_SWITCH",
+    "EventCode": "0x28a",
+    "BriefDescription": "OC to IC mode switch.",
+    "PublicDescription": "OC Mode Switch. OC to IC mode switch.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "IC_OC_MODE_SWITCH.IC_OC_MODE_SWITCH",
+    "EventCode": "0x28a",
+    "BriefDescription": "IC to OC mode switch.",
+    "PublicDescription": "OC Mode Switch. IC to OC mode switch.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.RETIRE_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "RETIRE Tokens unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. RETIRE Tokens unavailable.",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.AGSQ_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "AGSQ Tokens unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. AGSQ Tokens unavailable.",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALU_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "ALU tokens total unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALU tokens total unavailable.",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALSQ3_0_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ3_0_TOKEN_STALL",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ3_0_TOKEN_STALL",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALSQ3_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "ALSQ 3 Tokens unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ 3 Tokens unavailable.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALSQ2_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "ALSQ 2 Tokens unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ 2 Tokens unavailable.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "DE_DIS_DISPATCH_TOKEN_STALLS0.ALSQ1_TOKEN_STALL",
+    "EventCode": "0xaf",
+    "BriefDescription": "ALSQ 1 Tokens unavailable.",
+    "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. ALSQ 1 Tokens unavailable.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "EX_RET_INSTR",
+    "EventCode": "0xc0",
+    "BriefDescription": "Retired Instructions."
+  },
+  {
+    "EventName": "EX_RET_COPS",
+    "EventCode": "0xc1",
+    "BriefDescription": "The number of uOps retired. This includes all processor activity (instructions, exceptions, interrupts, microcode assists, etc.). The number of events logged per cycle can vary from 0 to 4."
+  },
+  {
+    "EventName": "EX_RET_BRN",
+    "EventCode": "0xc2",
+    "BriefDescription": "The number of branch instructions retired. This includes all types of architectural control flow changes, including exceptions and interrupts."
+  },
+  {
+    "EventName": "EX_RET_BRN_MISP",
+    "EventCode": "0xc3",
+    "BriefDescription": "The number of branch instructions retired, of any type, that were not correctly predicted. This includes those for which prediction is not attempted (far control transfers, exceptions and interrupts)."
+  },
+  {
+    "EventName": "EX_RET_BRN_TKN",
+    "EventCode": "0xc4",
+    "BriefDescription": "The number of taken branches that were retired. This includes all types of architectural control flow changes, including exceptions and interrupts."
+  },
+  {
+    "EventName": "EX_RET_BRN_TKN_MISP",
+    "EventCode": "0xc5",
+    "BriefDescription": "The number of retired taken branch instructions that were mispredicted."
+  },
+  {
+    "EventName": "EX_RET_BRN_FAR",
+    "EventCode": "0xc6",
+    "BriefDescription": "The number of far control transfers retired including far call/jump/return, IRET, SYSCALL and SYSRET, plus exceptions and interrupts. Far control transfers are not subject to branch prediction."
+  },
+  {
+    "EventName": "EX_RET_BRN_RESYNC",
+    "EventCode": "0xc7",
+    "BriefDescription": "The number of resync branches. These reflect pipeline restarts due to certain microcode assists and events such as writes to the active instruction stream, among other things. Each occurrence reflects a restart penalty similar to a branch mispredict. This is relatively rare."
+  },
+  {
+    "EventName": "EX_RET_NEAR_RET",
+    "EventCode": "0xc8",
+    "BriefDescription": "The number of near return instructions (RET or RET Iw) retired."
+  },
+  {
+    "EventName": "EX_RET_NEAR_RET_MISPRED",
+    "EventCode": "0xc9",
+    "BriefDescription": "The number of near returns retired that were not correctly predicted by the return address predictor. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction."
+  },
+  {
+    "EventName": "EX_RET_BRN_IND_MISP",
+    "EventCode": "0xca",
+    "BriefDescription": "Retired Indirect Branch Instructions Mispredicted."
+  },
+  {
+    "EventName": "EX_RET_MMX_FP_INSTR.SSE_INSTR",
+    "EventCode": "0xcb",
+    "BriefDescription": "SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42, AVX).",
+    "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42, AVX).",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "EX_RET_MMX_FP_INSTR.MMX_INSTR",
+    "EventCode": "0xcb",
+    "BriefDescription": "MMX instructions.",
+    "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. MMX instructions.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "EX_RET_MMX_FP_INSTR.X87_INSTR",
+    "EventCode": "0xcb",
+    "BriefDescription": "x87 instructions.",
+    "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPS. x87 instructions.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "EX_RET_COND",
+    "EventCode": "0xd1",
+    "BriefDescription": "Retired Conditional Branch Instructions."
+  },
+  {
+    "EventName": "EX_RET_COND_MISP",
+    "EventCode": "0xd2",
+    "BriefDescription": "Retired Conditional Branch Instructions Mispredicted."
+  },
+  {
+    "EventName": "EX_DIV_BUSY",
+    "EventCode": "0xd3",
+    "BriefDescription": "Div Cycles Busy count."
+  },
+  {
+    "EventName": "EX_DIV_COUNT",
+    "EventCode": "0xd4",
+    "BriefDescription": "Div Op Count."
+  },
+  {
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_COUNT_ROLLOVER",
+    "EventCode": "0x1cf",
+    "BriefDescription": "Number of times an op could not be tagged by IBS because of a previous tagged op that has not retired.",
+    "PublicDescription": "Tagged IBS Ops. Number of times an op could not be tagged by IBS because of a previous tagged op that has not retired.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_TAGGED_OPS_RET",
+    "EventCode": "0x1cf",
+    "BriefDescription": "Number of Ops tagged by IBS that retired.",
+    "PublicDescription": "Tagged IBS Ops. Number of Ops tagged by IBS that retired.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "EX_TAGGED_IBS_OPS.IBS_TAGGED_OPS",
+    "EventCode": "0x1cf",
+    "BriefDescription": "Number of Ops tagged by IBS.",
+    "PublicDescription": "Tagged IBS Ops. Number of Ops tagged by IBS.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "EX_RET_FUS_BRNCH_INST",
+    "EventCode": "0x1d0",
+    "BriefDescription": "The number of fused retired branch instructions retired per cycle. The number of events logged per cycle can vary from 0 to 3."
+  },
+  {
+    "EventName": "L2_REQUEST_G1.RD_BLK_L",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. RD_BLK_L",
+    "PublicDescription": "Requests to L2 Group1. RD_BLK_L",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.RD_BLK_X",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. RD_BLK_X",
+    "PublicDescription": "Requests to L2 Group1. RD_BLK_X",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.LS_RD_BLK_C_S",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
+    "PublicDescription": "Requests to L2 Group1. LS_RD_BLK_C_S",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.CACHEABLE_IC_READ",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
+    "PublicDescription": "Requests to L2 Group1. CACHEABLE_IC_READ",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.CHANGE_TO_X",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. CHANGE_TO_X",
+    "PublicDescription": "Requests to L2 Group1. CHANGE_TO_X",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.PREFETCH_L2",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. PREFETCH_L2",
+    "PublicDescription": "Requests to L2 Group1. PREFETCH_L2",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.L2_HW_PF",
+    "EventCode": "0x60",
+    "BriefDescription": "Requests to L2 Group1. L2_HW_PF",
+    "PublicDescription": "Requests to L2 Group1. L2_HW_PF",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "L2_REQUEST_G1.OTHER_REQUESTS",
+    "EventCode": "0x60",
+    "BriefDescription": "Events covered by Core::X86::Pmc::Core::L2RequestG2.",
+    "PublicDescription": "Requests to L2 Group1. Events covered by Core::X86::Pmc::Core::L2RequestG2.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.GROUP1",
+    "EventCode": "0x61",
+    "BriefDescription": "All Group 1 commands not in unit0.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. All Group 1 commands not in unit0.",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.LS_RD_SIZED",
+    "EventCode": "0x61",
+    "BriefDescription": "RdSized, RdSized32, RdSized64.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. RdSized, RdSized32, RdSized64.",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.LS_RD_SIZED_NC",
+    "EventCode": "0x61",
+    "BriefDescription": "RdSizedNC, RdSized32NC, RdSized64NC.",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. RdSizedNC, RdSized32NC, RdSized64NC.",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.IC_RD_SIZED",
+    "EventCode": "0x61",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.IC_RD_SIZED_NC",
+    "EventCode": "0x61",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. IC_RD_SIZED_NC",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.SMC_INVAL",
+    "EventCode": "0x61",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. SMC_INVAL",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.BUS_LOCKS_ORIGINATOR",
+    "EventCode": "0x61",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_ORIGINATOR",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "L2_REQUEST_G2.BUS_LOCKS_RESPONSES",
+    "EventCode": "0x61",
+    "BriefDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
+    "PublicDescription": "Multi-events in that LS and IF requests can be received simultaneous. BUS_LOCKS_RESPONSES",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "L2_LATENCY.L2_CYCLES_WAITING_ON_FILLS",
+    "EventCode": "0x62",
+    "BriefDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
+    "PublicDescription": "Total cycles spent waiting for L2 fills to complete from L3 or memory, divided by four. This may be used to calculate average latency by multiplying this count by four and then dividing by the total number of L2 fills (unit mask Core::X86::Pmc::Core::L2RequestG1 == FEh). Event counts are for both threads. To calculate average latency, the number of fills from both threads must be used. L2_CYCLES_WAITING_ON_FILLS",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "L2_WBC_REQ.WCB_WRITE",
+    "EventCode": "0x63",
+    "BriefDescription": "LS to L2 WBC requests. WCB_WRITE",
+    "PublicDescription": "LS to L2 WBC requests. WCB_WRITE",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "L2_WBC_REQ.WCB_CLOSE",
+    "EventCode": "0x63",
+    "BriefDescription": "LS to L2 WBC requests. WCB_CLOSE",
+    "PublicDescription": "LS to L2 WBC requests. WCB_CLOSE",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "L2_WBC_REQ.CACHE_LINE_FLUSH",
+    "EventCode": "0x63",
+    "BriefDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
+    "PublicDescription": "LS to L2 WBC requests. CACHE_LINE_FLUSH",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "L2_WBC_REQ.I_LINE_FLUSH",
+    "EventCode": "0x63",
+    "BriefDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
+    "PublicDescription": "LS to L2 WBC requests. I_LINE_FLUSH",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "L2_WBC_REQ.ZERO_BYTE_STORE",
+    "EventCode": "0x63",
+    "BriefDescription": "This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
+    "PublicDescription": "LS to L2 WBC requests. This becomes WriteNoData at SDP; this count does not include DVM Sync Ops and bus locks which are counted in Core::X86::Pmc::Core::L2RequestG2.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "L2_WBC_REQ.LOCAL_IC_CLR",
+    "EventCode": "0x63",
+    "BriefDescription": "Local IC Clear.",
+    "PublicDescription": "LS to L2 WBC requests. Local IC Clear.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "L2_WBC_REQ.CL_ZERO",
+    "EventCode": "0x63",
+    "BriefDescription": "Cache Line Zero.",
+    "PublicDescription": "LS to L2 WBC requests. Cache Line Zero.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_CS",
+    "EventCode": "0x64",
+    "BriefDescription": "LS ReadBlock C/S Hit.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS ReadBlock C/S Hit.",
+    "UMask": "0x80"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_L_HIT_X",
+    "EventCode": "0x64",
+    "BriefDescription": "LS Read Block L Hit X.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS Read Block L Hit X.",
+    "UMask": "0x40"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_L_HIT_S",
+    "EventCode": "0x64",
+    "BriefDescription": "LsRdBlkL Hit Shared.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LsRdBlkL Hit Shared.",
+    "UMask": "0x20"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_X",
+    "EventCode": "0x64",
+    "BriefDescription": "LsRdBlkX/ChgToX Hit X.  Count RdBlkX finding Shared as a Miss.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LsRdBlkX/ChgToX Hit X.  Count RdBlkX finding Shared as a Miss.",
+    "UMask": "0x10"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.LS_RD_BLK_C",
+    "EventCode": "0x64",
+    "BriefDescription": "LS Read Block C S L X Change to X Miss.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. LS Read Block C S L X Change to X Miss.",
+    "UMask": "0x8"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_HIT_X",
+    "EventCode": "0x64",
+    "BriefDescription": "IC Fill Hit Exclusive Stale.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Hit Exclusive Stale.",
+    "UMask": "0x4"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_HIT_S",
+    "EventCode": "0x64",
+    "BriefDescription": "IC Fill Hit Shared.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Hit Shared.",
+    "UMask": "0x2"
+  },
+  {
+    "EventName": "L2_CACHE_REQ_STAT.IC_FILL_MISS",
+    "EventCode": "0x64",
+    "BriefDescription": "IC Fill Miss.",
+    "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. IC Fill Miss.",
+    "UMask": "0x1"
+  },
+  {
+    "EventName": "L2_FILL_PENDING.L2_FILL_BUSY",
+    "EventCode": "0x6d",
+    "BriefDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",
+    "PublicDescription": "Total cycles spent with one or more fill requests in flight from L2. L2_FILL_BUSY",
+    "UMask": "0x1"
+  }
+]
