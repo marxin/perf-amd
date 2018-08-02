@@ -1,9 +1,44 @@
 #!/usr/bin/env python3
 
+import json
+import re
+
 from itertools import *
+
+def convert(name):
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+
+def canonicalize_name(name):
+    r = convert(name).upper()
+    r = r.replace('-', '_').replace('__', '_')
+    for c in r:
+        assert c.isdigit() or c.isupper() or c == '_'
+    return r.upper()
+
+class GroupValue:
+    def __init__(self, bits, value):
+        self.bits = bits
+
+        if 'Reserved.' in value:
+            self.name = 'reserved'
+            self.description = '' 
+            return
+
+        i = value.find(' ')
+        self.name = value[:i].strip('.').strip(':')
+        self.description = value[i + 1:].replace('Read-write. ', '').replace('Reset: 0.', '').replace('Read-only.', '').strip()
+
+    def get_name(self):
+        return canonicalize_name(self.name)
+
+    def get_mask(self):
+        return hex(1 << int(self.bits))
 
 class Group:
     def __init__(self, name, lines):
+        assert name.startswith('PMCx')
+        self.pmc = ('0x' + name.split(' ')[0].lstrip('PMCx').lower()).replace('0x0', '0x')
         name = name[name.find(' ') + 1:name.rfind(' ')]
         assert name[0] == '['
         assert name[-1] == ']'
@@ -36,7 +71,18 @@ class Group:
             lines = lines[len(parts):]
 
         assert len(bits) == len(values)
-        self.values = zip(bits, values)
+        values = zip(bits, values)
+        self.values = [GroupValue(x[0], x[1]) for x in values]
+
+    def get_event_name(self):
+        name = self.identifier.split(':')[-1]
+        return canonicalize_name(name)
+
+    def get_description(self):
+        if self.description != '':
+            return self.description
+        else:
+            return self.name + '.'
 
 class Section:
     def __init__(self, name, lines):
@@ -83,6 +129,29 @@ while len(lines) > 0:
 for s in sections:
     print('=== SECTION: ' + s.name + ' ===')
     for g in s.groups:
-        print('  ' + g.name + ': ' + g.identifier)
+        print(g.pmc + ': ' + g.name + ': ' + g.get_event_name())
+        print('  ' + g.description)
         for v in g.values:
-            print('   ' + str(v))
+            print('   XXX ' + v.get_name() + ':' + v.description)
+
+results = []
+for s in sections:
+    for g in s.groups:
+        if len(g.values) == 1:
+            assert g.values[0].get_name() == 'RESERVED'
+            d = {'EventName': g.get_event_name(), 'EventCode': g.pmc, 'BriefDescription': g.get_description()}
+            results.append(d)
+        else:
+            for v in g.values:
+                if v.get_name() != 'RESERVED':
+                    description = v.description
+                    full_description = g.get_description() + ' ' + description
+                    if description == '':
+                        description = g.get_description() + ' ' + v.get_name()
+                        full_description = description
+                    d = {'EventName': v.get_name(), 'EventCode': g.pmc, 'BriefDescription': description,
+                            'PublicDescription': full_description, 'UMask': v.get_mask()}
+                    results.append(d)
+
+with open('other.json', 'w') as outfile:
+    json.dump(results, outfile, indent = 2)

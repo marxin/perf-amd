@@ -91,8 +91,7 @@ Bits
 Description
 Reserved.
 Optimized: Number of Scalar Ops optimized. Read-write. Reset: 0.
-OptPotential: Number of Ops that are candidates for optimization (have Z-bit either set or pass).
-Read-write. Reset: 0.
+OptPotential: Number of Ops that are candidates for optimization (have Z-bit either set or pass). Read-write. Reset: 0.
 SseMovOpsElim: Number of SSE Move Ops eliminated. Read-write. Reset: 0.
 SseMovOps: Number of SSE Move Ops. Read-write. Reset: 0.
 PMCx005 [Retired Serializing Ops] (FpRetiredSerOps)
@@ -100,7 +99,6 @@ Read-write. Reset: 00h.
 The number of serializing Ops retired.
 Core::X86::Pmc::Core::FpRetiredSerOps; PMCx005
 Bits
-Description
 15954945 Rev 1.14 - April 15, 2017
 7:4
 3
@@ -109,12 +107,11 @@ Description
 0
 2.1.13.3.2
 PPR for AMD Family 17h Model 01h B1
+Description
 Reserved.
-X87CtrlRet: x87 control word mispredict traps due to mispredictions in RC or PC, or changes in
-mask bits. Read-write. Reset: 0.
+X87CtrlRet: x87 control word mispredict traps due to mispredictions in RC or PC, or changes in mask bits. Read-write. Reset: 0.
 X87BotRet: x87 bottom-executing uOps retired. Read-write. Reset: 0.
-SseCtrlRet: SSE control word mispredict traps due to mispredictions in RC, FTZ or DAZ, or
-changes in mask bits. Read-write. Reset: 0.
+SseCtrlRet: SSE control word mispredict traps due to mispredictions in RC, FTZ or DAZ, or changes in mask bits. Read-write. Reset: 0.
 SseBotRet: SSE bottom-executing uOps retired. Read-write. Reset: 0.
 LS Events
 PMCx025 [Locks] (LsLocks)
@@ -551,10 +548,10 @@ from 0 to 3.
 Core::X86::Pmc::Core::ExRetFusBrnchInst; PMCx1D0
 Bits
 7:0
-2.1.13.3.6
 Description
 Reserved.
-L2 Cache Events.
+2.1.13.3.6
+L2 Cache Events
 PMCx060 [Requests to L2 Group1] (L2RequestG1)
 Read-write. Reset: 00h.
 Core::X86::Pmc::Core::L2RequestG1; PMCx060
@@ -670,28 +667,3 @@ Bits
 Description
 Reserved.
 L2FillBusy. Read-write. Reset: 0.
-2.1.13.4
-L3 Cache Performance Monitor Counters
-This section provides the core performance counter events that may be selected through
-Core::X86::Msr::ChL3PmcCfg. See Core::X86::Msr::ChL3Pmc.
-2.1.13.4.1
-L3 Cache PMC Events
-L3PMCx01 [L3 Cache Accesses] (L3RequestG1)
-Read-write. Reset: 00h.
-Core::X86::Pmc::L3::L3RequestG1; L3PMCx01
-Bits
-7
-6:0
-Description
-Caching: L3 cache accesses. Read-write. Reset: 0.
-Reserved.
-L3PMCx06 [L3 Miss] (L3CombClstrState)
-Read-write. Reset: 00h.
-Core::X86::Pmc::L3::L3CombClstrState; L3PMCx06
-Bits
-7:1
-0
-2.1.14
-Description
-Reserved.
-RequestMiss: L3 miss. Read-write. Reset: 0.
